@@ -208,10 +208,10 @@ public class Player : MonoBehaviour
                 transform.position.y,
                 other.transform.position.z);
 
-            if (Input.GetAxis("Horizontal") > 0)
+            if (Input.GetAxis("Horizontal") > 0 || direction > 0)
                 transform.Rotate(new Vector3(0, 1, 0), -90);
 
-            if (Input.GetAxis("Horizontal") < 0)
+            if (Input.GetAxis("Horizontal") < 0 || direction < 0)
                 transform.Rotate(new Vector3(0, 1, 0), 90);
         }
         else if (other.CompareTag("Death"))
