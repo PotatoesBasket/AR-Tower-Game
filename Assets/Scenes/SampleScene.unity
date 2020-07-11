@@ -493,6 +493,7 @@ MonoBehaviour:
   gravityPower: 0.1
   groundDist: 0.32
   safetyRayDist: 0.2
+  tapTimeLimit: 0.2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,10 +74,23 @@ public class Player : MonoBehaviour
         Move();
     }
 
+    Touch touch;
+    Vector3 startTouchPos;
+    Vector3 currentTouchPos;
+    bool hasTapped = false;
+    float direction = 0;
+    float touchTimer = 0;
+    public float tapTimeLimit = 0.01f;
+
     void PlayerForces()
     {
         if (allowInput)
         {
+            //
+            //  MOVEMENT
+            //
+
+            // keyboard controls
             if (Input.GetAxis("Horizontal") > 0)
             {
                 movement += transform.forward * runSpeed * Time.fixedDeltaTime;
@@ -88,10 +101,45 @@ public class Player : MonoBehaviour
                 movement += -transform.forward * runSpeed * Time.fixedDeltaTime;
             }
 
+            // touch controls
+            if (Input.touchCount > 0) //at least one finger currently touching screen
+            {
+                touch = Input.GetTouch(0); //update touch info
+                touchTimer += Time.fixedDeltaTime; //time how long touch occurs for
+
+                if (!hasTapped) //first frame of current touch
+                {
+                    hasTapped = true;
+                    startTouchPos = touch.position;
+                }
+            }
+            else //no fingers touching screen
+            {
+                if (touchTimer < tapTimeLimit && hasTapped == true)
+                    ActivateJump();
+
+                startTouchPos = Vector2.zero; //reset touch positions
+                currentTouchPos = Vector2.zero;
+                hasTapped = false; //no longer touching screen
+                touchTimer = 0; //reset touch timer
+            }
+
+            if (hasTapped) //ongoing touch frames
+            {
+                //movement
+                currentTouchPos = touch.position;
+                Vector2 dirVec = currentTouchPos - startTouchPos;
+                direction = Vector2.Dot(Vector2.right, new Vector2(dirVec.normalized.x, 0));
+                movement += transform.forward * direction * runSpeed * Time.fixedDeltaTime;
+            }
+
+            //
+            //  JUMPING
+            //
+
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
-                jumpTimer = jumpForceDuration;
-                gravityForce = Vector3.zero;
+                ActivateJump();
             }
 
             if (jumpTimer > 0)
@@ -101,10 +149,21 @@ public class Player : MonoBehaviour
                 gravityForce = Vector3.zero;
             }
         }
-        else if (Input.GetAxis("Horizontal") == 0)
-        {
+        else ReactivateControl();
+    }
+
+    //checks for no more input before allowing input again
+    //keeps player from moving immediately after respawn
+    void ReactivateControl()
+    {
+        if (Input.GetAxis("Horizontal") == 0 || Input.touchCount == 0)
             allowInput = true;
-        }
+    }
+
+    void ActivateJump()
+    {
+        jumpTimer = jumpForceDuration;
+        gravityForce = Vector3.zero;
     }
 
     void AutoForces()
