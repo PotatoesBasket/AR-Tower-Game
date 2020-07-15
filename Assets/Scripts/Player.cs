@@ -39,30 +39,19 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        if (IsGrounded())
-        {
-            Debug.DrawLine(transform.position, transform.position + -transform.up * groundDist, Color.green);
-            Debug.DrawLine(
-                transform.position + new Vector3(0, 0, safetyRayDist),
-                transform.position + new Vector3(0, 0, safetyRayDist) + -transform.up * groundDist,
-                Color.green);
-            Debug.DrawLine(
-                transform.position + new Vector3(0, 0, -safetyRayDist),
-                transform.position + new Vector3(0, 0, -safetyRayDist) + -transform.up * groundDist,
-                Color.green);
-        }
-        else
-        {
-            Debug.DrawLine(transform.position, transform.position + -transform.up * groundDist, Color.red);
-            Debug.DrawLine(
-                transform.position + new Vector3(0, 0, safetyRayDist),
-                transform.position + new Vector3(0, 0, safetyRayDist) + -transform.up * groundDist,
-                Color.red);
-            Debug.DrawLine(
-                transform.position + new Vector3(0, 0, -safetyRayDist),
-                transform.position + new Vector3(0, 0, -safetyRayDist) + -transform.up * groundDist,
-                Color.red);
-        }
+        //main ground test ray
+        Debug.DrawLine(transform.position, transform.position + -transform.up * groundDist,
+            IsGrounded() == true ? Color.green : Color.red);
+
+        //safety rays
+        Debug.DrawLine(
+            transform.position + transform.forward * safetyRayDist,
+            transform.position + transform.forward * safetyRayDist + -transform.up * groundDist,
+            IsGrounded() == true ? Color.green : Color.red);
+        Debug.DrawLine(
+            transform.position + -transform.forward * safetyRayDist,
+            transform.position + -transform.forward * safetyRayDist + -transform.up * groundDist,
+            IsGrounded() == true ? Color.green : Color.red);
     }
 
     private void FixedUpdate()
@@ -74,23 +63,25 @@ public class Player : MonoBehaviour
         Move();
     }
 
-    Touch touch;
-    Vector3 startTouchPos;
-    Vector3 currentTouchPos;
-    bool hasTapped = false;
-    float direction = 0;
-    float touchTimer = 0;
-    public float tapTimeLimit = 0.01f;
+    public TouchInfo touch1;
+    public TouchInfo touch2;
 
     void PlayerForces()
     {
         if (allowInput)
         {
+            // update touch info
+            if (Input.touchCount > 0)
+                touch1.touch = Input.GetTouch(0);
+
+            if (Input.touchCount > 1)
+                touch2.touch = Input.GetTouch(1);
+
             //
             //  MOVEMENT
             //
 
-            // keyboard controls
+            // move via axis input
             if (Input.GetAxis("Horizontal") > 0)
             {
                 movement += transform.forward * runSpeed * Time.fixedDeltaTime;
@@ -101,52 +92,48 @@ public class Player : MonoBehaviour
                 movement += -transform.forward * runSpeed * Time.fixedDeltaTime;
             }
 
-            // touch controls
-            if (Input.touchCount > 0) //at least one finger currently touching screen
+            // move via touch + drag motion
+            if (touch1.IsTouching)
             {
-                touch = Input.GetTouch(0); //update touch info
-                touchTimer += Time.fixedDeltaTime; //time how long touch occurs for
-
-                if (!hasTapped) //first frame of current touch
-                {
-                    hasTapped = true;
-                    startTouchPos = touch.position;
-                }
+                movement += transform.forward * touch1.direction * runSpeed * Time.fixedDeltaTime;
             }
-            else //no fingers touching screen
+            if (touch2.IsTouching)
             {
-                if (touchTimer < tapTimeLimit && hasTapped == true)
-                    ActivateJump();
-
-                startTouchPos = Vector2.zero; //reset touch positions
-                currentTouchPos = Vector2.zero;
-                hasTapped = false; //no longer touching screen
-                touchTimer = 0; //reset touch timer
-            }
-
-            if (hasTapped) //ongoing touch frames
-            {
-                //movement
-                currentTouchPos = touch.position;
-                Vector2 dirVec = currentTouchPos - startTouchPos;
-                direction = Vector2.Dot(Vector2.right, new Vector2(dirVec.normalized.x, 0));
-                movement += transform.forward * direction * runSpeed * Time.fixedDeltaTime;
+                movement += transform.forward * touch2.direction * runSpeed * Time.fixedDeltaTime;
             }
 
             //
             //  JUMPING
             //
 
-            if (Input.GetButtonDown("Jump") && IsGrounded())
-            {
-                ActivateJump();
-            }
-
+            // jump info
             if (jumpTimer > 0)
             {
                 jumpTimer -= Time.fixedDeltaTime;
                 movement += transform.up * jumpPower;
                 gravityForce = Vector3.zero;
+            }
+
+            // jump via jump button
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                ActivateJump();
+            }
+
+            // jump via tapping motion
+            if (touch1.activateTap)
+            {
+                touch1.activateTap = false;
+
+                if (IsGrounded())
+                    ActivateJump();
+            }
+            if (touch2.activateTap)
+            {
+                touch2.activateTap = false;
+
+                if (IsGrounded())
+                    ActivateJump();
             }
         }
         else ReactivateControl();
@@ -179,7 +166,7 @@ public class Player : MonoBehaviour
         player.Move(movement + gravityForce);
     }
 
-    void Respawn()
+    public void Respawn()
     {
         movement = Vector3.zero;
         gravityForce = Vector3.zero;
@@ -189,11 +176,11 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    bool IsGrounded()
+    public bool IsGrounded()
     {
         if (Physics.Raycast(transform.position, -transform.up, groundDist, mask) ||
-            Physics.Raycast(transform.position + new Vector3(0, 0, safetyRayDist), -transform.up, groundDist, mask) ||
-            Physics.Raycast(transform.position + new Vector3(0, 0, -safetyRayDist), -transform.up, groundDist, mask))
+            Physics.Raycast(transform.position + transform.forward * safetyRayDist, -transform.up, groundDist, mask) ||
+            Physics.Raycast(transform.position + -transform.forward * safetyRayDist, -transform.up, groundDist, mask))
             return true;
         else
             return false;
@@ -208,10 +195,10 @@ public class Player : MonoBehaviour
                 transform.position.y,
                 other.transform.position.z);
 
-            if (Input.GetAxis("Horizontal") > 0 || direction > 0)
+            if (Input.GetAxis("Horizontal") > 0 || touch1.direction > 0 || touch2.direction > 0)
                 transform.Rotate(new Vector3(0, 1, 0), -90);
 
-            if (Input.GetAxis("Horizontal") < 0 || direction < 0)
+            if (Input.GetAxis("Horizontal") < 0 || touch1.direction < 0 || touch2.direction < 0)
                 transform.Rotate(new Vector3(0, 1, 0), 90);
         }
         else if (other.CompareTag("Death"))
