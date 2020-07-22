@@ -139,8 +139,8 @@ public class Player : MonoBehaviour
         else ReactivateControl();
     }
 
-    //checks for no more input before allowing input again
-    //keeps player from moving immediately after respawn
+    // checks for no more input before allowing input again
+    // keeps player from moving immediately after respawn
     void ReactivateControl()
     {
         if (Input.GetAxis("Horizontal") == 0 || Input.touchCount == 0)
@@ -163,6 +163,7 @@ public class Player : MonoBehaviour
 
     void Move()
     {
+        Debug.DrawLine(transform.position, transform.position + movement * 10, Color.red);
         player.Move(movement + gravityForce);
     }
 
@@ -210,12 +211,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("creb");
-            Respawn();
-        }
-    }
+    //// uncomment to allow enemies to kill again
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Enemy"))
+    //    {
+    //        Debug.Log("creb");
+    //        Respawn();
+    //    }
+    //}
 }
