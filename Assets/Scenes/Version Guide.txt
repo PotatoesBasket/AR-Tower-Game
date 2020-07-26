@@ -1,0 +1,40 @@
+================
+Current Versions
+================
+
+--------
+Ver 0.1a
+--------
+- Iteration on TestScale
+- Scaling issues affecting player movement fixed
+- Known Bugs
+    > enemy and moving platforms still broken from scale, need to be redone
+
+--------
+Ver 0.1b
+--------
+- Copy of Ver 0.1a
+- Using for AR testing, not normally playable
+
+
+
+=================
+Previous Versions
+=================
+
+-----------
+SampleScene
+-----------
+- First iteration
+- Not properly scaled
+- No AR functionality
+- Known Bugs
+    > need to respawn for player to rotate properly with tower
+
+---------
+TestScale
+---------
+- Iteration on SampleScene
+- Used for scaling down and level planning
+- Known Bugs
+    > unplayable due to scaling breaking a number of things
