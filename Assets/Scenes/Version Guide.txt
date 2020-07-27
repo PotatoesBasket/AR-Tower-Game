@@ -13,8 +13,7 @@ Ver 0.1a
 --------
 Ver 0.1b
 --------
-- Copy of Ver 0.1a
-- Using for AR testing, not normally playable
+- Ver 0.1a, but set up for AR
 
 
 
@@ -31,10 +30,22 @@ SampleScene
 - Known Bugs
     > need to respawn for player to rotate properly with tower
 
+
+
+==============
+Testing Scenes
+==============
+
 ---------
 TestScale
 ---------
 - Iteration on SampleScene
 - Used for scaling down and level planning
-- Known Bugs
-    > unplayable due to scaling breaking a number of things
+- Not playable
+
+----------
+TestScale2
+----------
+- Iteration on Ver 0.1a
+- Used for testing scale
+- Not playable
