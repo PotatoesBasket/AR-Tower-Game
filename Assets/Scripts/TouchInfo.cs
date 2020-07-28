@@ -20,12 +20,12 @@ public class TouchInfo : MonoBehaviour
 
     public bool IsTouching { get; private set; } = false;
 
-    private void FixedUpdate()
+    private void Update()
     {
         touchPhase = touch.phase;
 
-        if ((touch.phase != TouchPhase.Ended || touch.phase != TouchPhase.Canceled))
-            touchTimer += Time.fixedDeltaTime; //time how long touch occurs for
+        if (touch.phase != TouchPhase.Ended || touch.phase != TouchPhase.Canceled)
+            touchTimer += Time.deltaTime; //time how long touch occurs for
 
         switch (touch.phase)
         {
@@ -53,10 +53,10 @@ public class TouchInfo : MonoBehaviour
             case TouchPhase.Ended:
                 if (endFrame == true) //first frame of ended phase only
                 {
-                    if (touchTimer < tapTimeLimit + Time.fixedDeltaTime)
+                    if (touchTimer < tapTimeLimit + Time.deltaTime)
                         activateTap = true;
 
-                    Debug.Log(touchTimer + " < " + (tapTimeLimit + Time.fixedDeltaTime).ToString());
+                    Debug.Log(touchTimer + " < " + (tapTimeLimit + Time.deltaTime).ToString());
                     startTouchPos = Vector2.zero; //reset touch positions
                     currentTouchPos = Vector2.zero;
                     touchTimer = 0;

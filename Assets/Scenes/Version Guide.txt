@@ -3,12 +3,33 @@ Current Versions
 ================
 
 --------
+Ver 0.2a
+--------
+- 2020/07/29 1:52am
+- Merge of Ver 0.1a and TestScale2
+- Known Bugs
+    > Rotating the arena just... stopped working. Yeah idk. It's not that important right now anyway
+    > Platforms and other objects haven't been scaled yet, still working out a good size for the tower first
+    > Touch controls could use work
+
+--------
+Ver 0.2b
+--------
+- Ver 0.2a, but for AR
+
+
+
+=================
+Previous Versions
+=================
+
+--------
 Ver 0.1a
 --------
 - Iteration on TestScale
 - Scaling issues affecting player movement fixed
 - Known Bugs
-    > enemy and moving platforms still broken from scale, need to be redone
+    > Enemy and moving platforms still broken from scale, need to be redone
 
 --------
 Ver 0.1b
@@ -17,24 +38,16 @@ Ver 0.1b
 
 
 
-=================
-Previous Versions
-=================
-
------------
-SampleScene
------------
-- First iteration
-- Not properly scaled
-- No AR functionality
-- Known Bugs
-    > need to respawn for player to rotate properly with tower
-
-
-
 ==============
 Testing Scenes
 ==============
+
+----------
+TestScale2
+----------
+- Iteration on Ver 0.1a
+- Used for testing scale
+- Not playable
 
 ---------
 TestScale
@@ -43,9 +56,11 @@ TestScale
 - Used for scaling down and level planning
 - Not playable
 
-----------
-TestScale2
-----------
-- Iteration on Ver 0.1a
-- Used for testing scale
-- Not playable
+-----------
+SampleScene
+-----------
+- First iteration
+- Not properly scaled
+- No AR functionality
+- Known Bugs
+    > Need to respawn for player to rotate properly with tower

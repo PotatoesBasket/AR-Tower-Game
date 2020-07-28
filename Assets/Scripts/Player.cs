@@ -52,15 +52,16 @@ public class Player : MonoBehaviour
             transform.position + -transform.forward * safetyRayDist,
             transform.position + -transform.forward * safetyRayDist + -transform.up * groundDist,
             IsGrounded() == true ? Color.green : Color.red);
+
+        PlayerForces();
     }
 
     private void FixedUpdate()
     {
-        movement = Vector3.zero;
-
-        PlayerForces();
         AutoForces();
         Move();
+
+        movement = Vector3.zero;
     }
 
     public TouchInfo touch1;
@@ -84,22 +85,22 @@ public class Player : MonoBehaviour
             // move via axis input
             if (Input.GetAxis("Horizontal") > 0)
             {
-                movement += transform.forward * runSpeed * Time.fixedDeltaTime;
+                movement += transform.forward * runSpeed * Time.deltaTime;
             }
 
             if (Input.GetAxis("Horizontal") < 0)
             {
-                movement += -transform.forward * runSpeed * Time.fixedDeltaTime;
+                movement += -transform.forward * runSpeed * Time.deltaTime;
             }
 
             // move via touch + drag motion
             if (touch1.IsTouching)
             {
-                movement += transform.forward * touch1.direction * runSpeed * Time.fixedDeltaTime;
+                movement += transform.forward * touch1.direction * runSpeed * Time.deltaTime;
             }
             if (touch2.IsTouching)
             {
-                movement += transform.forward * touch2.direction * runSpeed * Time.fixedDeltaTime;
+                movement += transform.forward * touch2.direction * runSpeed * Time.deltaTime;
             }
 
             //
@@ -109,7 +110,7 @@ public class Player : MonoBehaviour
             // jump info
             if (jumpTimer > 0)
             {
-                jumpTimer -= Time.fixedDeltaTime;
+                jumpTimer -= Time.deltaTime;
                 movement += transform.up * jumpPower;
                 gravityForce = Vector3.zero;
             }
