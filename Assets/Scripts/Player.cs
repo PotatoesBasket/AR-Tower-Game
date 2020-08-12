@@ -5,14 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player movement options")]
     public float runSpeed;
     public float jumpPower;
     public float jumpForceDuration;
     public float gravityPower;
-    public float groundDist;
+
+    [Header("Ground detection options")]
+    public float rayOriginHeight;
+    public float groundRayDist;
     public float safetyRayDist;
 
+    [Header("Player sound effects")]
+    public AudioClip jumpSFX;
+    public AudioClip takeDamageSFX;
+
+    [Header("Touch info, probably don't touch")]
+    public TouchInfo touch1;
+    public TouchInfo touch2;
+
+    [Header("Gameplay test camera")]
+    public GameObject altCamera;
+
     CharacterController player;
+    AudioSource playerSFX;
+
     Vector3 startPos;
     Quaternion startRot;
 
@@ -27,6 +44,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         player = GetComponent<CharacterController>();
+        playerSFX = GetComponent<AudioSource>();
+
+        if (!Application.isEditor || GameOptions.Instance.TestARInEditor)
+            altCamera.SetActive(false);
+        else
+            altCamera.SetActive(true);
+
         startPos = transform.position;
         startRot = transform.rotation;
         mask = LayerMask.GetMask("Tower");
@@ -39,20 +63,6 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        //main ground test ray
-        Debug.DrawLine(transform.position, transform.position + -transform.up * groundDist,
-            IsGrounded() == true ? Color.green : Color.red);
-
-        //safety rays
-        Debug.DrawLine(
-            transform.position + transform.forward * safetyRayDist,
-            transform.position + transform.forward * safetyRayDist + -transform.up * groundDist,
-            IsGrounded() == true ? Color.green : Color.red);
-        Debug.DrawLine(
-            transform.position + -transform.forward * safetyRayDist,
-            transform.position + -transform.forward * safetyRayDist + -transform.up * groundDist,
-            IsGrounded() == true ? Color.green : Color.red);
-
         PlayerForces();
     }
 
@@ -63,9 +73,6 @@ public class Player : MonoBehaviour
 
         movement = Vector3.zero;
     }
-
-    public TouchInfo touch1;
-    public TouchInfo touch2;
 
     void PlayerForces()
     {
@@ -152,6 +159,9 @@ public class Player : MonoBehaviour
     {
         jumpTimer = jumpForceDuration;
         gravityForce = Vector3.zero;
+
+        if (jumpSFX && !GameOptions.Instance.MuteSFX)
+            playerSFX.PlayOneShot(jumpSFX);
     }
 
     void AutoForces()
@@ -164,7 +174,6 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        Debug.DrawLine(transform.position, transform.position + movement * 10, Color.red);
         player.Move(movement + gravityForce);
     }
 
@@ -180,9 +189,9 @@ public class Player : MonoBehaviour
 
     public bool IsGrounded()
     {
-        if (Physics.Raycast(transform.position, -transform.up, groundDist, mask) ||
-            Physics.Raycast(transform.position + transform.forward * safetyRayDist, -transform.up, groundDist, mask) ||
-            Physics.Raycast(transform.position + -transform.forward * safetyRayDist, -transform.up, groundDist, mask))
+        if (Physics.Raycast(transform.position, -transform.up, groundRayDist, mask) ||
+            Physics.Raycast(transform.position + transform.forward * safetyRayDist, -transform.up, groundRayDist, mask) ||
+            Physics.Raycast(transform.position + -transform.forward * safetyRayDist, -transform.up, groundRayDist, mask))
             return true;
         else
             return false;
@@ -221,4 +230,24 @@ public class Player : MonoBehaviour
     //        Respawn();
     //    }
     //}
+
+    private void OnDrawGizmos()
+    {
+        //main ground test ray
+        Debug.DrawLine(transform.position, transform.position + -transform.up * groundRayDist,
+            IsGrounded() == true ? Color.green : Color.red);
+
+        //safety rays
+        Debug.DrawLine(
+            transform.position + transform.forward * safetyRayDist,
+            transform.position + transform.forward * safetyRayDist + -transform.up * groundRayDist,
+            IsGrounded() == true ? Color.green : Color.red);
+        Debug.DrawLine(
+            transform.position + -transform.forward * safetyRayDist,
+            transform.position + -transform.forward * safetyRayDist + -transform.up * groundRayDist,
+            IsGrounded() == true ? Color.green : Color.red);
+
+        //player movement (x10 for easier viewing)
+        Debug.DrawLine(transform.position, transform.position + movement, Color.red);
+    }
 }

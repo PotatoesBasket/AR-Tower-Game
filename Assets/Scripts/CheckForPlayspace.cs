@@ -11,6 +11,8 @@ public class CheckForPlayspace : MonoBehaviour
     public GameObject placementIndicator; // indicator for where you can place the tower
     public GameObject debugFloor; // fake floor for testing placement in editor
 
+    public GameObject ARObjects; // for disabling during testing
+
     ARRaycastManager rayManager;
     Pose placementPose;
 
@@ -23,10 +25,22 @@ public class CheckForPlayspace : MonoBehaviour
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
 
-        if (Application.isEditor)           // testing in editor
-            debugFloor.SetActive(true);
-        else                                // running on hardware
+        if (!Application.isEditor) //hardware testing
+        {
+            tower.SetActive(false);
             debugFloor.SetActive(false);
+            ARObjects.SetActive(true);
+        }
+        else if (GameOptions.Instance.TestARInEditor) //testing AR placement in editor
+        {
+            tower.SetActive(false);
+            debugFloor.SetActive(true);
+            ARObjects.SetActive(true);
+        }
+        else //test gameplay without AR
+        {
+            ARObjects.SetActive(false);
+        }
     }
 
     void Update()
