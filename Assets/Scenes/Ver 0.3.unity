@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964137, b: 0.5748163, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.496413, b: 0.57481503, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MuteSFX: 0
   MuteMusic: 0
-  TestARInEditor: 1
+  TestARInEditor: 0
 --- !u!1 &158357196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,7 +3763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 320, y: 240}
+  customRes: {x: 752, y: 204}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -4163,7 +4163,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 4.5904e-41, y: 0, z: 0, w: 1.8804413e-33}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7552,7 +7552,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 1.5, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9458,7 +9458,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411989821}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9469,7 +9469,7 @@ Transform:
   - {fileID: 158357197}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1428309069
 GameObject:
   m_ObjectHideFlags: 0
@@ -13409,9 +13409,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 0.2
-  jumpPower: 0.005
-  jumpForceDuration: 0.15
-  gravityPower: 0.05
+  jumpPower: 0.2
+  jumpForceDuration: 0.3
+  gravityPower: 0.07
   rayOriginHeight: 0
   groundRayDist: 0.031
   safetyRayDist: 0.012

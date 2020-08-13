@@ -64,11 +64,11 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         PlayerForces();
+        AutoForces();
     }
 
     private void FixedUpdate()
     {
-        AutoForces();
         Move();
 
         movement = Vector3.zero;
@@ -92,35 +92,27 @@ public class Player : MonoBehaviour
             // move via axis input
             if (Input.GetAxis("Horizontal") > 0)
             {
-                movement += transform.forward * runSpeed * Time.deltaTime;
+                movement += transform.forward * runSpeed * 0.01f;
             }
 
             if (Input.GetAxis("Horizontal") < 0)
             {
-                movement += -transform.forward * runSpeed * Time.deltaTime;
+                movement += -transform.forward * runSpeed * 0.01f;
             }
 
             // move via touch + drag motion
             if (touch1.IsTouching)
             {
-                movement += transform.forward * touch1.direction * runSpeed * Time.deltaTime;
+                movement += transform.forward * touch1.direction * runSpeed * 0.01f;
             }
             if (touch2.IsTouching)
             {
-                movement += transform.forward * touch2.direction * runSpeed * Time.deltaTime;
+                movement += transform.forward * touch2.direction * runSpeed * 0.01f;
             }
 
             //
             //  JUMPING
             //
-
-            // jump info
-            if (jumpTimer > 0)
-            {
-                jumpTimer -= Time.deltaTime;
-                movement += transform.up * jumpPower;
-                gravityForce = Vector3.zero;
-            }
 
             // jump via jump button
             if (Input.GetButtonDown("Jump") && IsGrounded())
@@ -143,6 +135,15 @@ public class Player : MonoBehaviour
                 if (IsGrounded())
                     ActivateJump();
             }
+
+            // jump info
+            if (jumpTimer > 0)
+            {
+                movement += transform.up * jumpPower * Mathf.Min(jumpTimer, Time.deltaTime);
+                gravityForce = Vector3.zero;
+            }
+
+            jumpTimer -= Time.deltaTime;
         }
         else ReactivateControl();
     }
@@ -169,7 +170,7 @@ public class Player : MonoBehaviour
         if (IsGrounded())
             gravityForce = Vector3.zero;
         else
-            gravityForce += -transform.up * gravityPower * Time.fixedDeltaTime;
+            gravityForce += -transform.up * gravityPower * 0.01f;
     }
 
     void Move()
