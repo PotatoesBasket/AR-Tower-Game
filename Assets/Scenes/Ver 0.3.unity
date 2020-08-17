@@ -1037,6 +1037,7 @@ MonoBehaviour:
   startPoint: {fileID: 1840859306}
   endPoint: {fileID: 40838847}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!65 &74574537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1727,6 +1728,7 @@ MonoBehaviour:
   startPoint: {fileID: 133414228}
   endPoint: {fileID: 951990744}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &125980943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2197,7 @@ MonoBehaviour:
   startPoint: {fileID: 1132412914}
   endPoint: {fileID: 1728392548}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &186785526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,6 +2476,7 @@ MonoBehaviour:
   startPoint: {fileID: 837502659}
   endPoint: {fileID: 1914226256}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &247594910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,6 +2853,7 @@ MonoBehaviour:
   startPoint: {fileID: 1034939851}
   endPoint: {fileID: 909941127}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!64 &254615116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3758,6 +3763,7 @@ MonoBehaviour:
   startPoint: {fileID: 1414006347}
   endPoint: {fileID: 500934670}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &345895715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,6 +3889,7 @@ MonoBehaviour:
   startPoint: {fileID: 1967506762}
   endPoint: {fileID: 1182203297}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &348664395
 GameObject:
   m_ObjectHideFlags: 0
@@ -4488,6 +4495,7 @@ MonoBehaviour:
   startPoint: {fileID: 829645505}
   endPoint: {fileID: 162846135}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &420296964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,7 +4755,7 @@ GameObject:
   - component: {fileID: 447529442}
   - component: {fileID: 447529443}
   m_Layer: 0
-  m_Name: initialShadingGroup_polySurface431_pCube5 (1)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4760,12 +4768,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447529438}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1437, y: -0.023206, z: 0.0264}
-  m_LocalScale: {x: 1, y: 0.7153, z: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.15712506, y: -3.7375586, z: 1.0239999}
+  m_LocalScale: {x: 6.25, y: 51.092453, z: 6.25}
   m_Children: []
-  m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 1
+  m_Father: {fileID: 1126354113}
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &447529440
 MeshRenderer:
@@ -5057,6 +5065,7 @@ MonoBehaviour:
   startPoint: {fileID: 1539892734}
   endPoint: {fileID: 76926320}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &479611002
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,6 +5164,7 @@ MonoBehaviour:
   startPoint: {fileID: 2021532727}
   endPoint: {fileID: 1430546199}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!64 &479611007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5598,6 +5608,7 @@ MonoBehaviour:
   startPoint: {fileID: 291041318}
   endPoint: {fileID: 553428701}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!23 &503981606
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6683,6 +6694,7 @@ MonoBehaviour:
   startPoint: {fileID: 1421703461}
   endPoint: {fileID: 562698840}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!65 &645525816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7340,6 +7352,7 @@ MonoBehaviour:
   startPoint: {fileID: 2041946881}
   endPoint: {fileID: 1490646850}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &755457704
 GameObject:
   m_ObjectHideFlags: 0
@@ -8171,6 +8184,7 @@ MonoBehaviour:
   startPoint: {fileID: 420296964}
   endPoint: {fileID: 1207526863}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!64 &831555661
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8508,7 +8522,7 @@ Transform:
   - {fileID: 2111716343467214184}
   - {fileID: 1913936481}
   m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &889872514
 GameObject:
@@ -9054,6 +9068,7 @@ MonoBehaviour:
   startPoint: {fileID: 1696213011}
   endPoint: {fileID: 4186832}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &945209123
 GameObject:
   m_ObjectHideFlags: 0
@@ -9500,6 +9515,7 @@ MonoBehaviour:
   startPoint: {fileID: 491389561}
   endPoint: {fileID: 80347331}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &981790241
 GameObject:
   m_ObjectHideFlags: 0
@@ -9960,7 +9976,7 @@ Transform:
   - {fileID: 614492323647834768}
   - {fileID: 645525814}
   m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1014162004
 GameObject:
@@ -10247,6 +10263,7 @@ MonoBehaviour:
   startPoint: {fileID: 1214745499}
   endPoint: {fileID: 1249442908}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!23 &1027795140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10571,6 +10588,7 @@ MonoBehaviour:
   startPoint: {fileID: 1244915772}
   endPoint: {fileID: 259439744}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &1057435745
 GameObject:
   m_ObjectHideFlags: 0
@@ -11104,8 +11122,10 @@ Transform:
   - {fileID: 8921187611470680771}
   - {fileID: 507941503646505157}
   - {fileID: 5811352264595291216}
+  - {fileID: 4207619996390882574}
+  - {fileID: 447529439}
   m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1132412914
 GameObject:
@@ -12121,6 +12141,7 @@ MonoBehaviour:
   startPoint: {fileID: 1168361819}
   endPoint: {fileID: 1500319512}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &1264533292
 GameObject:
   m_ObjectHideFlags: 0
@@ -12205,7 +12226,7 @@ Transform:
   - {fileID: 1720843817}
   - {fileID: 1331265474}
   m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1271851491
 GameObject:
@@ -12286,6 +12307,7 @@ MonoBehaviour:
   startPoint: {fileID: 1705668311}
   endPoint: {fileID: 1549993844}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!23 &1271851496
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12814,6 +12836,7 @@ MonoBehaviour:
   startPoint: {fileID: 1368003321}
   endPoint: {fileID: 348664395}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!23 &1331265478
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13093,6 +13116,7 @@ MonoBehaviour:
   startPoint: {fileID: 1068792802}
   endPoint: {fileID: 357145151}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!114 &1348914831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13108,6 +13132,7 @@ MonoBehaviour:
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &1353166126
 GameObject:
   m_ObjectHideFlags: 0
@@ -14499,6 +14524,7 @@ MonoBehaviour:
   startPoint: {fileID: 1098933237}
   endPoint: {fileID: 581061030}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &1485945908
 GameObject:
   m_ObjectHideFlags: 0
@@ -15043,7 +15069,7 @@ Transform:
   - {fileID: 981790242}
   - {fileID: 1604308552}
   m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520224433
 GameObject:
@@ -15688,6 +15714,7 @@ MonoBehaviour:
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &1593390150
 GameObject:
   m_ObjectHideFlags: 0
@@ -16043,6 +16070,7 @@ MonoBehaviour:
   startPoint: {fileID: 679648405}
   endPoint: {fileID: 964352451}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!114 &1612995809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16058,6 +16086,7 @@ MonoBehaviour:
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &1641542610
 GameObject:
   m_ObjectHideFlags: 0
@@ -16137,6 +16166,7 @@ MonoBehaviour:
   startPoint: {fileID: 127532120}
   endPoint: {fileID: 618116153}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!23 &1641542615
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16772,6 +16802,7 @@ MonoBehaviour:
   startPoint: {fileID: 443087223}
   endPoint: {fileID: 1224107418}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &1705668311
 GameObject:
   m_ObjectHideFlags: 0
@@ -17007,6 +17038,7 @@ MonoBehaviour:
   startPoint: {fileID: 25160532}
   endPoint: {fileID: 768016711}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!23 &1720843821
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17403,6 +17435,7 @@ MonoBehaviour:
   startPoint: {fileID: 1589980011}
   endPoint: {fileID: 1275359936}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &1823327256
 GameObject:
   m_ObjectHideFlags: 0
@@ -18320,6 +18353,7 @@ MonoBehaviour:
   startPoint: {fileID: 1264533292}
   endPoint: {fileID: 1988626325}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &1914226256
 GameObject:
   m_ObjectHideFlags: 0
@@ -18459,6 +18493,7 @@ MonoBehaviour:
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!114 &1919380508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18526,6 +18561,7 @@ MonoBehaviour:
   startPoint: {fileID: 186785526}
   endPoint: {fileID: 2083041210}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!65 &1946135686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18697,6 +18733,7 @@ MonoBehaviour:
   startPoint: {fileID: 1919380505}
   endPoint: {fileID: 250574379}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!65 &1970018293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19277,6 +19314,7 @@ MonoBehaviour:
   startPoint: {fileID: 2109611520}
   endPoint: {fileID: 376740526}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &2041946881
 GameObject:
   m_ObjectHideFlags: 0
@@ -19448,6 +19486,7 @@ MonoBehaviour:
   startPoint: {fileID: 160711799}
   endPoint: {fileID: 933537842}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!1 &2082562647
 GameObject:
   m_ObjectHideFlags: 0
@@ -19541,7 +19580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f55701bd4fe0a74a95e66e23960c8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 7
+  runSpeed: 2
   jumpPower: 0.5
   jumpForceDuration: 0.15
   gravityPower: 0.015
@@ -20365,6 +20404,7 @@ MonoBehaviour:
   startPoint: {fileID: 247942525}
   endPoint: {fileID: 430921655}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &2611712063820091845
 GameObject:
   m_ObjectHideFlags: 0
@@ -20556,12 +20596,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6088766261208152792}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.162, y: -0.0069865, z: 0.0264}
-  m_LocalScale: {x: 1, y: 0.62391, z: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.27150005, y: -2.579032, z: 1.0239999}
+  m_LocalScale: {x: 6.25, y: 44.564648, z: 6.25}
   m_Children: []
-  m_Father: {fileID: 5006512735757171468}
-  m_RootOrder: 0
+  m_Father: {fileID: 1126354113}
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4234547735139810538
 Transform:
@@ -20634,8 +20674,6 @@ Transform:
   m_LocalPosition: {x: -0.741, y: -2.08, z: 1.189}
   m_LocalScale: {x: 6.25, y: 71.428, z: 6.25}
   m_Children:
-  - {fileID: 4207619996390882574}
-  - {fileID: 447529439}
   - {fileID: 886419996}
   - {fileID: 1268571258}
   - {fileID: 1518728098}
@@ -20707,6 +20745,7 @@ MonoBehaviour:
   startPoint: {fileID: 831419916}
   endPoint: {fileID: 1916835048}
   animationLength: 0
+  sphereDisplaySize: 0.02
 --- !u!1 &5572996032338231196
 GameObject:
   m_ObjectHideFlags: 0
@@ -20770,6 +20809,7 @@ MonoBehaviour:
   startPoint: {fileID: 798359714}
   endPoint: {fileID: 755457704}
   animationLength: 3
+  sphereDisplaySize: 0.02
 --- !u!33 &5577235688254282647
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20882,7 +20922,7 @@ GameObject:
   - component: {fileID: 6088766261208152793}
   - component: {fileID: 6088766261208152794}
   m_Layer: 0
-  m_Name: initialShadingGroup_polySurface431_pCube5
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
