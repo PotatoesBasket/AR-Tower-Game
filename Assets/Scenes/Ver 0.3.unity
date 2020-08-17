@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4186833}
   - component: {fileID: 4186834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 7582218}
   - component: {fileID: 7582220}
   - component: {fileID: 7582221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 11605216}
   - component: {fileID: 11605218}
   - component: {fileID: 11605219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 25160533}
   - component: {fileID: 25160534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40838848}
   - component: {fileID: 40838849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 74574538}
   - component: {fileID: 74574537}
   - component: {fileID: 74574536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 76926321}
   - component: {fileID: 76926322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80347332}
   - component: {fileID: 80347333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 82967487}
   - component: {fileID: 82967489}
   - component: {fileID: 82967490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 110811010}
   - component: {fileID: 110811012}
   - component: {fileID: 110811013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   - component: {fileID: 119558771}
   - component: {fileID: 119558772}
   - component: {fileID: 119558773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,7 +1784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127532121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1815,7 +1815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 133414229}
   - component: {fileID: 133414230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1898,7 +1898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160711800}
   - component: {fileID: 160711801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1944,7 +1944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162846136}
   - component: {fileID: 162846137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2086,7 +2086,7 @@ GameObject:
   - component: {fileID: 167114832}
   - component: {fileID: 167114833}
   - component: {fileID: 167114834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2208,7 +2208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186785527}
   - component: {fileID: 186785528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2257,7 +2257,7 @@ GameObject:
   - component: {fileID: 213392848}
   - component: {fileID: 213392850}
   - component: {fileID: 213392851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,7 +2365,7 @@ GameObject:
   - component: {fileID: 222673891}
   - component: {fileID: 222673892}
   - component: {fileID: 222673893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInNOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247942526}
   - component: {fileID: 247942527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2612,7 +2612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250574380}
   - component: {fileID: 250574381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2661,7 +2661,7 @@ GameObject:
   - component: {fileID: 250789478}
   - component: {fileID: 250789480}
   - component: {fileID: 250789481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2769,7 +2769,7 @@ GameObject:
   - component: {fileID: 254615116}
   - component: {fileID: 254615117}
   - component: {fileID: 254615115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlidingLeftRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2983,7 +2983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259439745}
   - component: {fileID: 259439746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3032,7 +3032,7 @@ GameObject:
   - component: {fileID: 267072211}
   - component: {fileID: 267072213}
   - component: {fileID: 267072214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3140,7 +3140,7 @@ GameObject:
   - component: {fileID: 273326882}
   - component: {fileID: 273326883}
   - component: {fileID: 273326884}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3292,7 +3292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 291041319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 300699615}
   - component: {fileID: 300699617}
   - component: {fileID: 300699618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3652,7 +3652,7 @@ GameObject:
   - component: {fileID: 341069156}
   - component: {fileID: 341069157}
   - component: {fileID: 341069158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3778,7 +3778,7 @@ GameObject:
   - component: {fileID: 345895719}
   - component: {fileID: 345895720}
   - component: {fileID: 345895721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlidingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3900,7 +3900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348664396}
   - component: {fileID: 348664397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3946,7 +3946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 357145152}
   - component: {fileID: 357145153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3992,7 +3992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376740527}
   - component: {fileID: 376740528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4276,7 +4276,7 @@ GameObject:
   - component: {fileID: 395345378}
   - component: {fileID: 395345380}
   - component: {fileID: 395345381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4384,7 +4384,7 @@ GameObject:
   - component: {fileID: 417153474}
   - component: {fileID: 417153475}
   - component: {fileID: 417153476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4506,7 +4506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420296965}
   - component: {fileID: 420296966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4555,7 +4555,7 @@ GameObject:
   - component: {fileID: 423916728}
   - component: {fileID: 423916730}
   - component: {fileID: 423916731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4659,7 +4659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430921656}
   - component: {fileID: 430921657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4705,7 +4705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443087224}
   - component: {fileID: 443087225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4754,7 +4754,7 @@ GameObject:
   - component: {fileID: 447529440}
   - component: {fileID: 447529442}
   - component: {fileID: 447529443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4954,7 +4954,7 @@ GameObject:
   - component: {fileID: 469363510}
   - component: {fileID: 469363511}
   - component: {fileID: 469363512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5080,7 +5080,7 @@ GameObject:
   - component: {fileID: 479611006}
   - component: {fileID: 479611007}
   - component: {fileID: 479611008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5340,7 +5340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491389562}
   - component: {fileID: 491389563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5389,7 +5389,7 @@ GameObject:
   - component: {fileID: 491567597}
   - component: {fileID: 491567599}
   - component: {fileID: 491567600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5493,7 +5493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 500934671}
   - component: {fileID: 500934672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5543,7 +5543,7 @@ GameObject:
   - component: {fileID: 503981605}
   - component: {fileID: 503981604}
   - component: {fileID: 503981603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5669,7 +5669,7 @@ GameObject:
   - component: {fileID: 538489286}
   - component: {fileID: 538489287}
   - component: {fileID: 538489288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5913,7 +5913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 553428702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5944,7 +5944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 562698841}
   - component: {fileID: 562698842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5993,7 +5993,7 @@ GameObject:
   - component: {fileID: 575799645}
   - component: {fileID: 575799647}
   - component: {fileID: 575799648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6097,7 +6097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581061031}
   - component: {fileID: 581061032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6285,7 +6285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618116154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6320,7 +6320,7 @@ GameObject:
   - component: {fileID: 619102120}
   - component: {fileID: 619102121}
   - component: {fileID: 619102122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6442,7 +6442,7 @@ GameObject:
   - component: {fileID: 621298172}
   - component: {fileID: 621298171}
   - component: {fileID: 621298170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6656,7 +6656,7 @@ GameObject:
   - component: {fileID: 645525817}
   - component: {fileID: 645525816}
   - component: {fileID: 645525815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6778,7 +6778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679648406}
   - component: {fileID: 679648407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6827,7 +6827,7 @@ GameObject:
   - component: {fileID: 699155407}
   - component: {fileID: 699155409}
   - component: {fileID: 699155410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6934,7 +6934,7 @@ GameObject:
   - component: {fileID: 699787639}
   - component: {fileID: 699787641}
   - component: {fileID: 699787642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7133,7 +7133,7 @@ GameObject:
   - component: {fileID: 739702143}
   - component: {fileID: 739702142}
   - component: {fileID: 739702141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7241,7 +7241,7 @@ GameObject:
   - component: {fileID: 746628785}
   - component: {fileID: 746628787}
   - component: {fileID: 746628786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7363,7 +7363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 755457705}
   - component: {fileID: 755457706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7447,7 +7447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 405, y: 279}
+  customRes: {x: 320, y: 240}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -7769,7 +7769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768016712}
   - component: {fileID: 768016713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7815,7 +7815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798359715}
   - component: {fileID: 798359716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8004,7 +8004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829645506}
   - component: {fileID: 829645507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8050,7 +8050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831419917}
   - component: {fileID: 831419918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8100,7 +8100,7 @@ GameObject:
   - component: {fileID: 831555660}
   - component: {fileID: 831555661}
   - component: {fileID: 831555662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8222,7 +8222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837502660}
   - component: {fileID: 837502661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8272,7 +8272,7 @@ GameObject:
   - component: {fileID: 841426509}
   - component: {fileID: 841426508}
   - component: {fileID: 841426507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8393,7 +8393,7 @@ GameObject:
   - component: {fileID: 846574762}
   - component: {fileID: 846574761}
   - component: {fileID: 846574760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8626,7 +8626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909941128}
   - component: {fileID: 909941129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8907,7 +8907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 933537843}
   - component: {fileID: 933537844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8957,7 +8957,7 @@ GameObject:
   - component: {fileID: 933935427}
   - component: {fileID: 933935428}
   - component: {fileID: 933935429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9083,7 +9083,7 @@ GameObject:
   - component: {fileID: 945209127}
   - component: {fileID: 945209126}
   - component: {fileID: 945209125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9201,7 +9201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951990745}
   - component: {fileID: 951990746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9250,7 +9250,7 @@ GameObject:
   - component: {fileID: 952429342}
   - component: {fileID: 952429341}
   - component: {fileID: 952429340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9354,7 +9354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964352452}
   - component: {fileID: 964352453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9404,7 +9404,7 @@ GameObject:
   - component: {fileID: 965125007}
   - component: {fileID: 965125006}
   - component: {fileID: 965125010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9530,7 +9530,7 @@ GameObject:
   - component: {fileID: 981790245}
   - component: {fileID: 981790246}
   - component: {fileID: 981790247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9835,7 +9835,7 @@ GameObject:
   - component: {fileID: 1003364027}
   - component: {fileID: 1003364029}
   - component: {fileID: 1003364030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9991,7 +9991,7 @@ GameObject:
   - component: {fileID: 1014162006}
   - component: {fileID: 1014162008}
   - component: {fileID: 1014162009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10198,7 +10198,7 @@ GameObject:
   - component: {fileID: 1027795139}
   - component: {fileID: 1027795138}
   - component: {fileID: 1027795137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10320,7 +10320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034939852}
   - component: {fileID: 1034939853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10369,7 +10369,7 @@ GameObject:
   - component: {fileID: 1036988567}
   - component: {fileID: 1036988569}
   - component: {fileID: 1036988570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10477,7 +10477,7 @@ GameObject:
   - component: {fileID: 1053916242}
   - component: {fileID: 1053916243}
   - component: {fileID: 1053916244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlidingLeftRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10603,7 +10603,7 @@ GameObject:
   - component: {fileID: 1057435749}
   - component: {fileID: 1057435750}
   - component: {fileID: 1057435751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10721,7 +10721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068792803}
   - component: {fileID: 1068792804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10770,7 +10770,7 @@ GameObject:
   - component: {fileID: 1078814356}
   - component: {fileID: 1078814358}
   - component: {fileID: 1078814359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10908,7 +10908,7 @@ GameObject:
   - component: {fileID: 1096737302}
   - component: {fileID: 1096737304}
   - component: {fileID: 1096737305}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11012,7 +11012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1098933238}
   - component: {fileID: 1098933239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11137,7 +11137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132412915}
   - component: {fileID: 1132412916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11273,7 +11273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168361820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11308,7 +11308,7 @@ GameObject:
   - component: {fileID: 1181348252}
   - component: {fileID: 1181348253}
   - component: {fileID: 1181348254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11426,7 +11426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182203298}
   - component: {fileID: 1182203299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11658,7 +11658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207526864}
   - component: {fileID: 1207526865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11733,7 +11733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1214745500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11797,7 +11797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224107419}
   - component: {fileID: 1224107420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11843,7 +11843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244915773}
   - component: {fileID: 1244915774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11888,7 +11888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1249442909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12030,7 +12030,7 @@ GameObject:
   - component: {fileID: 1261880654}
   - component: {fileID: 1261880656}
   - component: {fileID: 1261880655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12152,7 +12152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264533293}
   - component: {fileID: 1264533294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12242,7 +12242,7 @@ GameObject:
   - component: {fileID: 1271851495}
   - component: {fileID: 1271851494}
   - component: {fileID: 1271851493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12471,7 +12471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1275359937}
   - component: {fileID: 1275359938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12663,7 +12663,7 @@ GameObject:
   - component: {fileID: 1299037996}
   - component: {fileID: 1299037998}
   - component: {fileID: 1299037999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12771,7 +12771,7 @@ GameObject:
   - component: {fileID: 1331265477}
   - component: {fileID: 1331265476}
   - component: {fileID: 1331265475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12896,7 +12896,7 @@ GameObject:
   - component: {fileID: 1341556754}
   - component: {fileID: 1341556756}
   - component: {fileID: 1341556757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13005,7 +13005,7 @@ GameObject:
   - component: {fileID: 1348914829}
   - component: {fileID: 1348914830}
   - component: {fileID: 1348914831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13321,7 +13321,7 @@ GameObject:
   - component: {fileID: 1361393651}
   - component: {fileID: 1361393653}
   - component: {fileID: 1361393654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13425,7 +13425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1368003322}
   - component: {fileID: 1368003323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13776,7 +13776,7 @@ GameObject:
   - component: {fileID: 1407125203}
   - component: {fileID: 1407125205}
   - component: {fileID: 1407125206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14073,7 +14073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414006348}
   - component: {fileID: 1414006349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14119,7 +14119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421703462}
   - component: {fileID: 1421703463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14168,7 +14168,7 @@ GameObject:
   - component: {fileID: 1428978234}
   - component: {fileID: 1428978233}
   - component: {fileID: 1428978232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14271,7 +14271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1430546200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14305,7 +14305,7 @@ GameObject:
   - component: {fileID: 1438718002}
   - component: {fileID: 1438718001}
   - component: {fileID: 1438718000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14413,7 +14413,7 @@ GameObject:
   - component: {fileID: 1469868797}
   - component: {fileID: 1469868798}
   - component: {fileID: 1469868799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlidingleftNRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14642,7 +14642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490646851}
   - component: {fileID: 1490646852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14691,7 +14691,7 @@ GameObject:
   - component: {fileID: 1492645741}
   - component: {fileID: 1492645743}
   - component: {fileID: 1492645744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14798,7 +14798,7 @@ GameObject:
   - component: {fileID: 1497040202}
   - component: {fileID: 1497040204}
   - component: {fileID: 1497040205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14905,7 +14905,7 @@ GameObject:
   - component: {fileID: 1497093379}
   - component: {fileID: 1497093381}
   - component: {fileID: 1497093382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15008,7 +15008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1500319513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15084,7 +15084,7 @@ GameObject:
   - component: {fileID: 1520224435}
   - component: {fileID: 1520224437}
   - component: {fileID: 1520224438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15188,7 +15188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539892735}
   - component: {fileID: 1539892736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15233,7 +15233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549993845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: endPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15267,7 +15267,7 @@ GameObject:
   - component: {fileID: 1550017732}
   - component: {fileID: 1550017734}
   - component: {fileID: 1550017735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15663,7 +15663,7 @@ GameObject:
   - component: {fileID: 1589980012}
   - component: {fileID: 1589980013}
   - component: {fileID: 1589980014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15728,7 +15728,7 @@ GameObject:
   - component: {fileID: 1593390152}
   - component: {fileID: 1593390154}
   - component: {fileID: 1593390155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15836,7 +15836,7 @@ GameObject:
   - component: {fileID: 1604308555}
   - component: {fileID: 1604308556}
   - component: {fileID: 1604308557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15959,7 +15959,7 @@ GameObject:
   - component: {fileID: 1612995807}
   - component: {fileID: 1612995808}
   - component: {fileID: 1612995809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16101,7 +16101,7 @@ GameObject:
   - component: {fileID: 1641542614}
   - component: {fileID: 1641542613}
   - component: {fileID: 1641542612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16428,7 +16428,7 @@ GameObject:
   - component: {fileID: 1669776047}
   - component: {fileID: 1669776049}
   - component: {fileID: 1669776050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16641,7 +16641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696213012}
   - component: {fileID: 1696213013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16691,7 +16691,7 @@ GameObject:
   - component: {fileID: 1700488025}
   - component: {fileID: 1700488026}
   - component: {fileID: 1700488027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16812,7 +16812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1705668312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16973,7 +16973,7 @@ GameObject:
   - component: {fileID: 1720843820}
   - component: {fileID: 1720843819}
   - component: {fileID: 1720843818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17095,7 +17095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728392549}
   - component: {fileID: 1728392550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17202,7 +17202,7 @@ GameObject:
   - component: {fileID: 1749546127}
   - component: {fileID: 1749546126}
   - component: {fileID: 1749546125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17324,7 +17324,7 @@ GameObject:
   - component: {fileID: 1812866465}
   - component: {fileID: 1812866466}
   - component: {fileID: 1812866467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17541,7 +17541,7 @@ GameObject:
   - component: {fileID: 1835029264}
   - component: {fileID: 1835029266}
   - component: {fileID: 1835029267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17645,7 +17645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1840859307}
   - component: {fileID: 1840859308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17884,7 +17884,7 @@ GameObject:
   - component: {fileID: 1869513425}
   - component: {fileID: 1869513427}
   - component: {fileID: 1869513428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17991,7 +17991,7 @@ GameObject:
   - component: {fileID: 1909221911}
   - component: {fileID: 1909221913}
   - component: {fileID: 1909221914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18242,7 +18242,7 @@ GameObject:
   - component: {fileID: 1913936484}
   - component: {fileID: 1913936485}
   - component: {fileID: 1913936486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sliding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18364,7 +18364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914226257}
   - component: {fileID: 1914226258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18410,7 +18410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916835049}
   - component: {fileID: 1916835050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18457,7 +18457,7 @@ GameObject:
   - component: {fileID: 1919380506}
   - component: {fileID: 1919380508}
   - component: {fileID: 1919380507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18523,7 +18523,7 @@ GameObject:
   - component: {fileID: 1946135687}
   - component: {fileID: 1946135686}
   - component: {fileID: 1946135685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18645,7 +18645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967506763}
   - component: {fileID: 1967506764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18695,7 +18695,7 @@ GameObject:
   - component: {fileID: 1970018294}
   - component: {fileID: 1970018293}
   - component: {fileID: 1970018292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18820,7 +18820,7 @@ GameObject:
   - component: {fileID: 1976752807}
   - component: {fileID: 1976752809}
   - component: {fileID: 1976752810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18924,7 +18924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988626326}
   - component: {fileID: 1988626327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19065,7 +19065,7 @@ GameObject:
   - component: {fileID: 2018157599}
   - component: {fileID: 2018157601}
   - component: {fileID: 2018157602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19168,7 +19168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021532728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: startPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19203,7 +19203,7 @@ GameObject:
   - component: {fileID: 2023066258}
   - component: {fileID: 2023066259}
   - component: {fileID: 2023066260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlidingleftRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19325,7 +19325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041946882}
   - component: {fileID: 2041946883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19375,7 +19375,7 @@ GameObject:
   - component: {fileID: 2077547953}
   - component: {fileID: 2077547954}
   - component: {fileID: 2077547955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving up and Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19581,8 +19581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 2
-  jumpPower: 0.5
-  jumpForceDuration: 0.15
+  jumpPower: 0.2
+  jumpForceDuration: 0.8
   gravityPower: 0.015
   rayOriginHeight: 0
   groundRayDist: 0.031
@@ -19776,7 +19776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083041211}
   - component: {fileID: 2083041212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19825,7 +19825,7 @@ GameObject:
   - component: {fileID: 2089966341}
   - component: {fileID: 2089966340}
   - component: {fileID: 2089966339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20021,7 +20021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109611521}
   - component: {fileID: 2109611522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20116,7 +20116,7 @@ GameObject:
   - component: {fileID: 1017454577363128134}
   - component: {fileID: 334401679604312576}
   - component: {fileID: 334401679604312577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20291,7 +20291,7 @@ GameObject:
   - component: {fileID: 2873408926520327057}
   - component: {fileID: 1079661967054086766}
   - component: {fileID: 1079661967054086767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20355,7 +20355,7 @@ GameObject:
   - component: {fileID: 2286992203946580725}
   - component: {fileID: 2286992203946580726}
   - component: {fileID: 2286992203946580727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlidingLeftRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20418,7 +20418,7 @@ GameObject:
   - component: {fileID: 5766056091496036728}
   - component: {fileID: 2611712063820091846}
   - component: {fileID: 2611712063820091847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20503,7 +20503,7 @@ GameObject:
   - component: {fileID: 422578486938332826}
   - component: {fileID: 2770341161672052387}
   - component: {fileID: 2770341161672052388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20696,7 +20696,7 @@ GameObject:
   - component: {fileID: 5404709347608451328}
   - component: {fileID: 5404709347608451329}
   - component: {fileID: 5404709347608451330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingUpnDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20760,7 +20760,7 @@ GameObject:
   - component: {fileID: 5572996032338231197}
   - component: {fileID: 5572996032338231198}
   - component: {fileID: 5572996032338231199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingInnOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20921,7 +20921,7 @@ GameObject:
   - component: {fileID: 5880948791815334434}
   - component: {fileID: 6088766261208152793}
   - component: {fileID: 6088766261208152794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20976,7 +20976,7 @@ GameObject:
   - component: {fileID: 32972163982756397}
   - component: {fileID: 6725933189532992344}
   - component: {fileID: 6725933189532992345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CnrPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21067,7 +21067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512735757171468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: towerblocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21147,7 +21147,7 @@ GameObject:
   - component: {fileID: 2747504266530049931}
   - component: {fileID: 9000433471869826559}
   - component: {fileID: 9000433471869826560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlatformPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
