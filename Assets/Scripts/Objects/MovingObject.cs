@@ -18,6 +18,7 @@ public class MovingObject : MonoBehaviour
     public GameObject startPoint;
     public GameObject endPoint;
     public float animationLength;
+    public float sphereDisplaySize = 0.02f;
     float timer;
     bool reverse = false;
 
@@ -47,13 +48,13 @@ public class MovingObject : MonoBehaviour
         if (startPoint != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(startPoint.transform.position, 0.2f);
+            Gizmos.DrawSphere(startPoint.transform.position, sphereDisplaySize);
         }
 
         if (endPoint != null)
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawSphere(endPoint.transform.position, 0.2f);
+            Gizmos.DrawSphere(endPoint.transform.position, sphereDisplaySize);
         }
     }
 }

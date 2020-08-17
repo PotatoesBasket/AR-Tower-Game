@@ -7,7 +7,7 @@ public class WaypointController : MonoBehaviour
 {
     public List<Waypoint> waypoints;
     public bool reverseAtEnd = false;
-    public float sphereDisplaySize = 0.2f;
+    public float sphereDisplaySize = 0.02f;
 
     int currentWaypoint = 0;
     int nextWaypoint = 1;
