@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Ver 0.3.unity
-    guid: dc5675ade539a4446b1cd49e7ae43471
+    path: Assets/Scenes/PuzzleTower1.unity
+    guid: b259450574eab4f4fbb9709f8efd8073
+  - enabled: 1
+    path: Assets/Scenes/PuzzleTower2.unity
+    guid: 52ff402332d83524e9c2c8f270e34494
+  - enabled: 1
+    path: Assets/Scenes/PuzzleTower3.unity
+    guid: 57b7398a56899e041949cdb43660512b
   m_configObjects: {}
