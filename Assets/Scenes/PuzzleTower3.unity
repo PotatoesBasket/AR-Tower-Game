@@ -5822,7 +5822,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.46
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7447,7 +7447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 405, y: 279}
+  customRes: {x: 507, y: 136}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -9742,6 +9742,7 @@ GameObject:
   - component: {fileID: 1000278041}
   - component: {fileID: 1000278040}
   - component: {fileID: 1000278039}
+  - component: {fileID: 1000278042}
   m_Layer: 0
   m_Name: EndGoal
   m_TagString: Untagged
@@ -9822,6 +9823,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000278037}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1000278042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000278037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8039ce55beb328248af9f14edd912a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1003364025
 GameObject:
   m_ObjectHideFlags: 0
