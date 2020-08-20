@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class MovingObject : MonoBehaviour
 {
     // create 2 empty gameObjects and assign them to this script as waypoints
@@ -22,6 +23,21 @@ public class MovingObject : MonoBehaviour
     float timer;
     bool reverse = false;
 
+    Rigidbody rb = null;
+
+    private void Start()
+    {
+        //get existing rigidbody or add one if there is none
+        if (!TryGetComponent(out rb))
+        {
+            gameObject.AddComponent(typeof(Rigidbody));
+            rb = GetComponent<Rigidbody>();
+        }
+
+        rb.useGravity = false;
+        rb.isKinematic = true;
+    }
+
     private void Update()
     {
         if (timer >= animationLength)
@@ -36,10 +52,10 @@ public class MovingObject : MonoBehaviour
 
         if (animationLength > 0)
         {
-            transform.position = Vector3.Lerp(
-            startPoint.transform.position,
-            endPoint.transform.position,
-            timer / animationLength);
+            rb.MovePosition(Vector3.Lerp(
+                startPoint.transform.position,
+                endPoint.transform.position,
+                timer / animationLength));
         }
     }
 

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.UIElements;
 
+[RequireComponent(typeof(Rigidbody))]
 public class WaypointController : MonoBehaviour
 {
     public List<Waypoint> waypoints;
@@ -13,6 +14,21 @@ public class WaypointController : MonoBehaviour
     int nextWaypoint = 1;
     float timer;
     bool reverse = false;
+
+    Rigidbody rb;
+
+    private void Start()
+    {
+        //get existing rigidbody or add one if there is none
+        if (!TryGetComponent(out rb))
+        {
+            gameObject.AddComponent(typeof(Rigidbody));
+            rb = GetComponent<Rigidbody>();
+        }
+
+        rb.useGravity = false;
+        rb.isKinematic = true;
+    }
 
     private void Update()
     {
@@ -63,10 +79,10 @@ public class WaypointController : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        transform.position = Vector3.Lerp(
+        rb.MovePosition(Vector3.Lerp(
         waypoints[currentWaypoint].transform.position,
         waypoints[nextWaypoint].transform.position,
-        timer / waypoints[currentWaypoint].timeToNext);
+        timer / waypoints[currentWaypoint].timeToNext));
     }
 
     private void OnDrawGizmos()

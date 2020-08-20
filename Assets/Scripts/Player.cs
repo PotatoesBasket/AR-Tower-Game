@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
 
     LayerMask mask;
 
+    Ray midRay, leftRay, rightRay;
+    RaycastHit midHit, leftHit, rightHit;
+
     private void Start()
     {
         player = GetComponent<CharacterController>();
@@ -63,6 +66,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
+        UpdateRays();
         PlayerForces();
         AutoForces();
     }
@@ -188,12 +192,30 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    void UpdateRays()
+    {
+        midRay = new Ray(transform.position + -transform.up * rayOriginHeight, -transform.up);
+        leftRay = new Ray(transform.position + -transform.up * rayOriginHeight + transform.forward * safetyRayDist, -transform.up);
+        rightRay = new Ray(transform.position + -transform.up * rayOriginHeight + -transform.forward * safetyRayDist, -transform.up);
+    }
+
     public bool IsGrounded()
     {
-        if (Physics.Raycast(transform.position, -transform.up, groundRayDist, mask) ||
-            Physics.Raycast(transform.position + transform.forward * safetyRayDist, -transform.up, groundRayDist, mask) ||
-            Physics.Raycast(transform.position + -transform.forward * safetyRayDist, -transform.up, groundRayDist, mask))
-            return true;
+        // 3 raycasts to check for ground
+        if (Physics.Raycast(midRay, out midHit, groundRayDist, mask) ||
+            Physics.Raycast(leftRay, out leftHit, groundRayDist, mask) ||
+            Physics.Raycast(rightRay, out rightHit, groundRayDist, mask))
+        {
+            // make sure not to stand on triggers
+            if ((midHit.collider != null && !midHit.collider.isTrigger) ||
+                (leftHit.collider != null && !leftHit.collider.isTrigger) ||
+                (rightHit.collider != null && !rightHit.collider.isTrigger))
+            {
+                return true;
+            }
+            else
+                return false;
+        }    
         else
             return false;
     }
@@ -213,39 +235,32 @@ public class Player : MonoBehaviour
             if (Input.GetAxis("Horizontal") < 0 || touch1.direction < 0 || touch2.direction < 0)
                 transform.Rotate(new Vector3(0, 1, 0), 90);
         }
-        else if (other.CompareTag("Death"))
+        
+        if (other.CompareTag("Death"))
             Respawn();
-        else if (other.CompareTag("Enemy"))
+        
+        if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
             jumpTimer = jumpForceDuration;
         }
     }
 
-    //// uncomment to allow enemies to kill again
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-    //        Debug.Log("creb");
-    //        Respawn();
-    //    }
-    //}
-
     private void OnDrawGizmos()
     {
         //main ground test ray
-        Debug.DrawLine(transform.position, transform.position + -transform.up * groundRayDist,
+        Debug.DrawLine(transform.position + -transform.up * rayOriginHeight,
+            transform.position + -transform.up * rayOriginHeight + -transform.up * groundRayDist,
             IsGrounded() == true ? Color.green : Color.red);
 
         //safety rays
         Debug.DrawLine(
-            transform.position + transform.forward * safetyRayDist,
-            transform.position + transform.forward * safetyRayDist + -transform.up * groundRayDist,
+            transform.position + -transform.up * rayOriginHeight + transform.forward * safetyRayDist,
+            transform.position + -transform.up * rayOriginHeight + transform.forward * safetyRayDist + -transform.up * groundRayDist,
             IsGrounded() == true ? Color.green : Color.red);
         Debug.DrawLine(
-            transform.position + -transform.forward * safetyRayDist,
-            transform.position + -transform.forward * safetyRayDist + -transform.up * groundRayDist,
+            transform.position + -transform.up * rayOriginHeight  + -transform.forward * safetyRayDist,
+            transform.position + -transform.up * rayOriginHeight  + -transform.forward * safetyRayDist + -transform.up * groundRayDist,
             IsGrounded() == true ? Color.green : Color.red);
 
         //player movement (x10 for easier viewing)
