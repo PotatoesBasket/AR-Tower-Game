@@ -87,16 +87,19 @@ public class WaypointController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        foreach (Waypoint point in waypoints)
+        if (waypoints[0] != null)
         {
-            if (point == waypoints[0])
-                Gizmos.color = Color.red;
-            else if (point == waypoints[waypoints.Count - 1])
-                Gizmos.color = Color.blue;
-            else
-                Gizmos.color = Color.white;
+            foreach (Waypoint point in waypoints)
+            {
+                if (point == waypoints[0])
+                    Gizmos.color = Color.red;
+                else if (point == waypoints[waypoints.Count - 1])
+                    Gizmos.color = Color.blue;
+                else
+                    Gizmos.color = Color.white;
 
-            Gizmos.DrawSphere(point.transform.position, sphereDisplaySize);
+                Gizmos.DrawSphere(point.transform.position, sphereDisplaySize);
+            }
         }
     }
 }

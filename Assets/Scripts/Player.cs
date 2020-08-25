@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     public TouchInfo touch1;
     public TouchInfo touch2;
 
+    public GameObject frontNose;
+    public GameObject backNose;
+
     [Header("Gameplay test camera")]
     public GameObject altCamera;
 
@@ -82,6 +85,8 @@ public class Player : MonoBehaviour
     {
         if (allowInput)
         {
+            UpdateFacingDirection();
+
             // update touch info
             if (Input.touchCount > 0)
                 touch1.touch = Input.GetTouch(0);
@@ -150,6 +155,49 @@ public class Player : MonoBehaviour
             jumpTimer -= Time.deltaTime;
         }
         else ReactivateControl();
+    }
+
+    void UpdateFacingDirection()
+    {
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            frontNose.SetActive(true);
+            backNose.SetActive(false);
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            frontNose.SetActive(false);
+            backNose.SetActive(true);
+        }
+
+        if (touch1.IsTouching)
+        {
+            if (touch1.direction > 0)
+            {
+                frontNose.SetActive(true);
+                backNose.SetActive(false);
+            }
+            else if (touch1.direction < 0)
+            {
+                frontNose.SetActive(false);
+                backNose.SetActive(true);
+            }
+        }
+
+        if (touch2.IsTouching)
+        {
+            if (touch2.direction > 0)
+            {
+                frontNose.SetActive(true);
+                backNose.SetActive(false);
+            }
+            else if (touch2.direction < 0)
+            {
+                frontNose.SetActive(false);
+                backNose.SetActive(true);
+            }
+        }
     }
 
     // checks for no more input before allowing input again
@@ -225,21 +273,7 @@ public class Player : MonoBehaviour
     Vector3 moveOffset;
 
     private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Corner"))
-        {
-            transform.position = new Vector3(
-                other.transform.position.x,
-                transform.position.y,
-                other.transform.position.z);
-
-            if (Input.GetAxis("Horizontal") > 0 || touch1.direction > 0 || touch2.direction > 0)
-                transform.Rotate(new Vector3(0, 1, 0), -90);
-
-            if (Input.GetAxis("Horizontal") < 0 || touch1.direction < 0 || touch2.direction < 0)
-                transform.Rotate(new Vector3(0, 1, 0), 90);
-        }
-        
+    {        
         if (other.CompareTag("Death"))
             Respawn();
         
