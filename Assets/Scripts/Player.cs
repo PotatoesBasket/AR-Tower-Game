@@ -96,22 +96,22 @@ public class Player : MonoBehaviour
             // move via axis input
             if (Input.GetAxis("Horizontal") > 0)
             {
-                movement += transform.forward * runSpeed * 0.01f;
+                movement += transform.forward * runSpeed * Time.deltaTime;
             }
 
             if (Input.GetAxis("Horizontal") < 0)
             {
-                movement += -transform.forward * runSpeed * 0.01f;
+                movement += -transform.forward * runSpeed * Time.deltaTime;
             }
 
             // move via touch + drag motion
             if (touch1.IsTouching)
             {
-                movement += transform.forward * touch1.direction * runSpeed * 0.01f;
+                movement += transform.forward * touch1.direction * runSpeed * Time.deltaTime;
             }
             if (touch2.IsTouching)
             {
-                movement += transform.forward * touch2.direction * runSpeed * 0.01f;
+                movement += transform.forward * touch2.direction * runSpeed * Time.deltaTime;
             }
 
             //
@@ -220,6 +220,10 @@ public class Player : MonoBehaviour
             return false;
     }
 
+    Vector3 currPlatformPos;
+    Vector3 prevPlatformPos;
+    Vector3 moveOffset;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Corner"))
@@ -244,6 +248,32 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             jumpTimer = jumpForceDuration;
         }
+
+        if (other.CompareTag("Platform"))
+        {
+            prevPlatformPos = other.transform.position;
+            currPlatformPos = other.transform.position;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Platform"))
+        {
+            prevPlatformPos = currPlatformPos;
+            currPlatformPos = other.transform.position;
+
+            moveOffset = currPlatformPos - prevPlatformPos;
+            movement += moveOffset;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Platform"))
+        {
+            moveOffset = Vector3.zero;
+        }
     }
 
     private void OnDrawGizmos()
@@ -264,6 +294,6 @@ public class Player : MonoBehaviour
             IsGrounded() == true ? Color.green : Color.red);
 
         //player movement (x10 for easier viewing)
-        Debug.DrawLine(transform.position, transform.position + movement, Color.red);
+        Debug.DrawLine(transform.position, transform.position + movement * 10, Color.red);
     }
 }
