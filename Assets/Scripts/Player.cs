@@ -193,6 +193,8 @@ public class Player : MonoBehaviour
                 playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
                 playerAnimator.SetBool("isRunning", true);
             }
+            else
+                playerAnimator.SetBool("isRunning", false);
         }
         else if (touch2.IsTouching)
         {
@@ -200,13 +202,21 @@ public class Player : MonoBehaviour
             {
                 frontNose.SetActive(true);
                 backNose.SetActive(false);
+                playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
+                playerAnimator.SetBool("isRunning", true);
             }
             else if (touch2.direction < 0)
             {
                 frontNose.SetActive(false);
                 backNose.SetActive(true);
+                playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
+                playerAnimator.SetBool("isRunning", true);
             }
+            else
+                playerAnimator.SetBool("isRunning", false);
         }
+        else
+            playerAnimator.SetBool("isRunning", false);
     }
 
     // checks for no more input before allowing input again
@@ -233,7 +243,7 @@ public class Player : MonoBehaviour
         if (IsGrounded())
             gravityForce = Vector3.zero;
         else
-            gravityForce += -transform.up * gravityPower * 0.01f;
+            gravityForce += -transform.up * gravityPower * Time.deltaTime;
     }
 
     void Move()
