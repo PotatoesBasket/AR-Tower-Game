@@ -174,10 +174,7 @@ public class Player : MonoBehaviour
             playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
             playerAnimator.SetBool("isRunning", true);
         }
-        else
-            playerAnimator.SetBool("isRunning", false);
-
-        if (touch1.IsTouching)
+        else if (touch1.IsTouching)
         {
             if (touch1.direction > 0)
             {
