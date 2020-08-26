@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public GameObject playerModel;
+    public Animator playerAnimator;
+
     [Header("Player movement options")]
     public float runSpeed;
     public float jumpPower;
@@ -161,13 +164,18 @@ public class Player : MonoBehaviour
         {
             frontNose.SetActive(true);
             backNose.SetActive(false);
+            playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
+            playerAnimator.SetBool("isRunning", true);
         }
-
-        if (Input.GetAxis("Horizontal") < 0)
+        else if (Input.GetAxis("Horizontal") < 0)
         {
             frontNose.SetActive(false);
             backNose.SetActive(true);
+            playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
+            playerAnimator.SetBool("isRunning", true);
         }
+        else
+            playerAnimator.SetBool("isRunning", false);
 
         if (touch1.IsTouching)
         {
@@ -175,15 +183,18 @@ public class Player : MonoBehaviour
             {
                 frontNose.SetActive(true);
                 backNose.SetActive(false);
+                playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
+                playerAnimator.SetBool("isRunning", true);
             }
             else if (touch1.direction < 0)
             {
                 frontNose.SetActive(false);
                 backNose.SetActive(true);
+                playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
+                playerAnimator.SetBool("isRunning", true);
             }
         }
-
-        if (touch2.IsTouching)
+        else if (touch2.IsTouching)
         {
             if (touch2.direction > 0)
             {
@@ -213,6 +224,8 @@ public class Player : MonoBehaviour
 
         if (jumpSFX && !GameOptions.Instance.MuteSFX)
             playerSFX.PlayOneShot(jumpSFX);
+
+        playerAnimator.SetTrigger("jump");
     }
 
     void AutoForces()
