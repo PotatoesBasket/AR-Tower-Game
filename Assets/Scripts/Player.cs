@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float rayOriginHeight;
     public float groundRayDist;
     public float safetyRayDist;
+    public float allowJumpDist;
 
     [Header("Player sound effects")]
     public AudioClip jumpSFX;
@@ -121,7 +122,7 @@ public class Player : MonoBehaviour
             //
 
             // jump via jump button
-            if (Input.GetButtonDown("Jump") && IsGrounded())
+            if (Input.GetButtonDown("Jump") && CanJump())
             {
                 ActivateJump();
             }
@@ -131,14 +132,14 @@ public class Player : MonoBehaviour
             {
                 touch1.activateTap = false;
 
-                if (IsGrounded())
+                if (CanJump())
                     ActivateJump();
             }
             if (touch2.activateTap)
             {
                 touch2.activateTap = false;
 
-                if (IsGrounded())
+                if (CanJump())
                     ActivateJump();
             }
 
@@ -260,7 +261,28 @@ public class Player : MonoBehaviour
             }
             else
                 return false;
-        }    
+        }
+        else
+            return false;
+    }
+
+    public bool CanJump()
+    {
+        // 3 raycasts to check for ground
+        if (Physics.Raycast(midRay, out midHit, allowJumpDist, mask) ||
+            Physics.Raycast(leftRay, out leftHit, allowJumpDist, mask) ||
+            Physics.Raycast(rightRay, out rightHit, allowJumpDist, mask))
+        {
+            // make sure not to stand on triggers
+            if ((midHit.collider != null && !midHit.collider.isTrigger) ||
+                (leftHit.collider != null && !leftHit.collider.isTrigger) ||
+                (rightHit.collider != null && !rightHit.collider.isTrigger))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
         else
             return false;
     }
@@ -270,10 +292,10 @@ public class Player : MonoBehaviour
     Vector3 moveOffset;
 
     private void OnTriggerEnter(Collider other)
-    {        
+    {
         if (other.CompareTag("Death"))
             Respawn();
-        
+
         if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
@@ -308,6 +330,19 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        //allow jump rays
+        Debug.DrawLine(transform.position + -transform.up * rayOriginHeight,
+            transform.position + -transform.up * rayOriginHeight + -transform.up * allowJumpDist,
+            CanJump() == true ? Color.cyan : Color.yellow);
+        Debug.DrawLine(
+            transform.position + -transform.up * rayOriginHeight + transform.forward * safetyRayDist,
+            transform.position + -transform.up * rayOriginHeight + transform.forward * safetyRayDist + -transform.up * allowJumpDist,
+            CanJump() == true ? Color.cyan : Color.yellow);
+        Debug.DrawLine(
+            transform.position + -transform.up * rayOriginHeight + -transform.forward * safetyRayDist,
+            transform.position + -transform.up * rayOriginHeight + -transform.forward * safetyRayDist + -transform.up * allowJumpDist,
+            CanJump() == true ? Color.cyan : Color.yellow);
+
         //main ground test ray
         Debug.DrawLine(transform.position + -transform.up * rayOriginHeight,
             transform.position + -transform.up * rayOriginHeight + -transform.up * groundRayDist,
@@ -319,8 +354,8 @@ public class Player : MonoBehaviour
             transform.position + -transform.up * rayOriginHeight + transform.forward * safetyRayDist + -transform.up * groundRayDist,
             IsGrounded() == true ? Color.green : Color.red);
         Debug.DrawLine(
-            transform.position + -transform.up * rayOriginHeight  + -transform.forward * safetyRayDist,
-            transform.position + -transform.up * rayOriginHeight  + -transform.forward * safetyRayDist + -transform.up * groundRayDist,
+            transform.position + -transform.up * rayOriginHeight + -transform.forward * safetyRayDist,
+            transform.position + -transform.up * rayOriginHeight + -transform.forward * safetyRayDist + -transform.up * groundRayDist,
             IsGrounded() == true ? Color.green : Color.red);
 
         //player movement (x10 for easier viewing)

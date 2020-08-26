@@ -13,6 +13,9 @@ public class CheckForPlayspace : MonoBehaviour
 
     public GameObject ARObjects; // for disabling during testing
 
+    public GameObject light1; // disable in AR
+    public GameObject light2;
+
     ARRaycastManager rayManager;
     Pose placementPose;
 
@@ -30,6 +33,8 @@ public class CheckForPlayspace : MonoBehaviour
             tower.SetActive(false);
             debugFloor.SetActive(false);
             ARObjects.SetActive(true);
+            light1.SetActive(false);
+            light2.SetActive(false);
         }
         else if (GameOptions.Instance.TestARInEditor) //testing AR placement in editor
         {
