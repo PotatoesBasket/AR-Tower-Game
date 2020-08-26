@@ -1683,7 +1683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447529438}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.125, y: -4.05, z: 1.0239999}
+  m_LocalPosition: {x: 0.2405, y: -4.05, z: 1.0239999}
   m_LocalScale: {x: 6.25, y: 51.092453, z: 6.25}
   m_Children: []
   m_Father: {fileID: 1126354113}
@@ -3102,9 +3102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14.1
+  cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 670, y: 339}
+  customRes: {x: 624, y: 339}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -9581,8 +9581,8 @@ MonoBehaviour:
   playerModel: {fileID: 8296172668255004290}
   playerAnimator: {fileID: 8296172668255004291}
   runSpeed: 0.3
-  jumpPower: 0.5
-  jumpForceDuration: 0.1
+  jumpPower: 0.6
+  jumpForceDuration: 0.2
   gravityPower: 0.01
   rayOriginHeight: 0.02
   groundRayDist: 0.012
