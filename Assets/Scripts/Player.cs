@@ -72,13 +72,10 @@ public class Player : MonoBehaviour
         UpdateRays();
         PlayerForces();
         AutoForces();
-    }
-
-    private void FixedUpdate()
-    {
         Move();
 
         movement = Vector3.zero;
+        moveOffset = Vector3.zero;
     }
 
     void PlayerForces()
@@ -227,7 +224,7 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        player.Move(movement + gravityForce);
+        player.Move(movement + moveOffset + gravityForce);
     }
 
     public void Respawn()
@@ -297,8 +294,7 @@ public class Player : MonoBehaviour
             prevPlatformPos = currPlatformPos;
             currPlatformPos = other.transform.position;
 
-            moveOffset = currPlatformPos - prevPlatformPos;
-            movement += moveOffset;
+            moveOffset += currPlatformPos - prevPlatformPos;
         }
     }
 
