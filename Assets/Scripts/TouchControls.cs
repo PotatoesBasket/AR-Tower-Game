@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TouchControls : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
+public class TouchControls : MonoBehaviour, IPointerDownHandler, IPointerUpHandler//, IPointerExitHandler, IPointerEnterHandler
 {
 	Player player;
 
@@ -26,11 +26,13 @@ public class TouchControls : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         switch (type)
         {
             case Type.LEFT:
-                player.MoveLeft();
+                if (!player.IsMovingRight)
+                    player.MoveLeft();
                 break;
 
             case Type.RIGHT:
-                player.MoveRight();
+                if (!player.IsMovingLeft)
+                    player.MoveRight();
                 break;
 
             case Type.JUMP:
@@ -56,37 +58,37 @@ public class TouchControls : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         }
 	}
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        switch (type)
-        {
-            case Type.LEFT:
-                player.EndLeft();
-                break;
+    //public void OnPointerExit(PointerEventData eventData)
+    //{
+    //    switch (type)
+    //    {
+    //        case Type.LEFT:
+    //            player.EndLeft();
+    //            break;
 
-            case Type.RIGHT:
-                player.EndRight();
-                break;
+    //        case Type.RIGHT:
+    //            player.EndRight();
+    //            break;
 
-            case Type.JUMP:
-                break;
-        }
-    }
+    //        case Type.JUMP:
+    //            break;
+    //    }
+    //}
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        switch (type)
-        {
-            case Type.LEFT:
-                player.MoveLeft();
-                break;
+    //public void OnPointerEnter(PointerEventData eventData)
+    //{
+    //    switch (type)
+    //    {
+    //        case Type.LEFT:
+    //            player.MoveLeft();
+    //            break;
 
-            case Type.RIGHT:
-                player.MoveRight();
-                break;
+    //        case Type.RIGHT:
+    //            player.MoveRight();
+    //            break;
 
-            case Type.JUMP:
-                break;
-        }
-    }
+    //        case Type.JUMP:
+    //            break;
+    //    }
+    //}
 }

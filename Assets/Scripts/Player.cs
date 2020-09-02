@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -11,7 +9,10 @@ public class Player : MonoBehaviour
     public Animator playerAnimator;
 
     [Header("Player movement options")]
-    public float runSpeed;
+    public float accSpeed;
+    public float deccelSpeed;
+    public float currentSpeed;
+    public float maxRunSpeed;
     public float jumpPower;
     public float jumpForceDuration;
     public float gravityPower;
@@ -35,9 +36,6 @@ public class Player : MonoBehaviour
     CharacterController player;
     AudioSource playerSFX;
 
-    Vector3 startPos;
-    Quaternion startRot;
-
     Vector3 movement;
     Vector3 gravityForce;
     float jumpTimer = 0;
@@ -59,8 +57,6 @@ public class Player : MonoBehaviour
         else
             altCamera.SetActive(true);
 
-        startPos = transform.position;
-        startRot = transform.rotation;
         mask = LayerMask.GetMask("Tower");
     }
 
@@ -85,66 +81,40 @@ public class Player : MonoBehaviour
         moveOffset = Vector3.zero;
     }
 
+    //***TOUCH CONTROLS******************
 
-    //***KEY CONTROLS***
-    public void KeyControls()
-    {
-        if (allowInput)
-        {
-            // move via axis input
-            if (Input.GetAxis("Horizontal") > 0)
-            {
-                movement += transform.forward * runSpeed * Time.deltaTime;
-            }
+    public bool IsMovingLeft { get; private set; } = false;
+    public bool IsMovingRight { get; private set; } = false;
 
-            if (Input.GetAxis("Horizontal") < 0)
-            {
-                movement += -transform.forward * runSpeed * Time.deltaTime;
-            }
-
-            // jump via jump button
-            if (Input.GetButtonDown("Jump"))
-            {
-                ActivateJump();
-            }
-        }
-    }
-    //-----------------------------------
-
-    bool isMovingLeft = false;
-    bool isMovingRight = false;
-
-    //***TOUCH CONTROLS***
     public void MoveLeft()
     {
         if (allowInput)
         {
-            isMovingLeft = true;
+            IsMovingLeft = true;
         }
     }
 
     public void EndLeft()
     {
-        isMovingLeft = false;
+        IsMovingLeft = false;
     }
 
     public void MoveRight()
     {
         if (allowInput)
         {
-            movement += transform.forward * runSpeed * Time.deltaTime;
-            isMovingRight = true;
+            IsMovingRight = true;
         }
     }
 
     public void EndRight()
     {
-        isMovingRight = false;
+        IsMovingRight = false;
     }
 
     public void ActivateJump()
     {
-        if (CanJump())
+        if (CanJump() && allowInput)
         {
             jumpTimer = jumpForceDuration;
             gravityForce = Vector3.zero;
@@ -157,16 +127,30 @@ public class Player : MonoBehaviour
     }
     //-----------------------------------
 
+    //***KEY CONTROLS********************
+    public void KeyControls()
+    {
+        if (Input.GetAxis("Horizontal") > 0)
+            movement += transform.forward * maxRunSpeed * Time.deltaTime;
+
+        if (Input.GetAxis("Horizontal") < 0)
+            movement += -transform.forward * maxRunSpeed * Time.deltaTime;
+
+        if (Input.GetButtonDown("Jump"))
+            ActivateJump();
+    }
+    //-----------------------------------
+
     void UpdateFacingDirection()
     {
-        if (Input.GetAxis("Horizontal") > 0 || isMovingRight)
+        if (IsMovingRight || Input.GetAxis("Horizontal") > 0)
         {
             frontNose.SetActive(true);
             backNose.SetActive(false);
             playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
             playerAnimator.SetBool("isRunning", true);
         }
-        else if (Input.GetAxis("Horizontal") < 0 || isMovingLeft)
+        else if (IsMovingLeft || Input.GetAxis("Horizontal") < 0)
         {
             frontNose.SetActive(false);
             backNose.SetActive(true);
@@ -179,11 +163,31 @@ public class Player : MonoBehaviour
 
     void PlayerForces()
     {
-        if (isMovingLeft)
-            movement += -transform.forward * runSpeed * Time.deltaTime;
+        if (IsMovingLeft)
+        {
+            if (currentSpeed < accSpeed)
+                currentSpeed += accSpeed;
+            else
+                currentSpeed = maxRunSpeed;
 
-        if (isMovingRight)
-            movement += transform.forward * runSpeed * Time.deltaTime;
+            movement += -transform.forward * currentSpeed * Time.deltaTime;
+        }
+        else if (IsMovingRight)
+        {
+            if (currentSpeed < accSpeed)
+                currentSpeed += accSpeed;
+            else
+                currentSpeed = maxRunSpeed;
+
+            movement += transform.forward * currentSpeed * Time.deltaTime;
+        }
+        else
+        {
+            if (currentSpeed > 0)
+                currentSpeed -= deccelSpeed;
+            else
+                currentSpeed = 0;
+        }
 
         if (jumpTimer > 0)
         {
