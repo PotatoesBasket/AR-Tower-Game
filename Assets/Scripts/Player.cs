@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -23,10 +25,6 @@ public class Player : MonoBehaviour
     [Header("Player sound effects")]
     public AudioClip jumpSFX;
     public AudioClip takeDamageSFX;
-
-    [Header("Touch info, probably don't touch")]
-    public TouchInfo touch1;
-    public TouchInfo touch2;
 
     public GameObject frontNose;
     public GameObject backNose;
@@ -74,31 +72,25 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         UpdateRays();
+        UpdateFacingDirection();
+
+        KeyControls();
+
         PlayerForces();
         AutoForces();
+
         Move();
 
         movement = Vector3.zero;
         moveOffset = Vector3.zero;
     }
 
-    void PlayerForces()
+
+    //***KEY CONTROLS***
+    public void KeyControls()
     {
         if (allowInput)
         {
-            UpdateFacingDirection();
-
-            // update touch info
-            if (Input.touchCount > 0)
-                touch1.touch = Input.GetTouch(0);
-
-            if (Input.touchCount > 1)
-                touch2.touch = Input.GetTouch(1);
-
-            //
-            //  MOVEMENT
-            //
-
             // move via axis input
             if (Input.GetAxis("Horizontal") > 0)
             {
@@ -110,129 +102,96 @@ public class Player : MonoBehaviour
                 movement += -transform.forward * runSpeed * Time.deltaTime;
             }
 
-            // move via touch + drag motion
-            if (touch1.IsTouching)
-            {
-                movement += transform.forward * touch1.direction * runSpeed * Time.deltaTime;
-            }
-            if (touch2.IsTouching)
-            {
-                movement += transform.forward * touch2.direction * runSpeed * Time.deltaTime;
-            }
-
-            //
-            //  JUMPING
-            //
-
             // jump via jump button
-            if (Input.GetButtonDown("Jump") && CanJump())
+            if (Input.GetButtonDown("Jump"))
             {
                 ActivateJump();
             }
-
-            // jump via tapping motion
-            if (touch1.activateTap)
-            {
-                touch1.activateTap = false;
-
-                if (CanJump())
-                    ActivateJump();
-            }
-            if (touch2.activateTap)
-            {
-                touch2.activateTap = false;
-
-                if (CanJump())
-                    ActivateJump();
-            }
-
-            // jump info
-            if (jumpTimer > 0)
-            {
-                movement += transform.up * jumpPower * Mathf.Min(jumpTimer, Time.deltaTime);
-                gravityForce = Vector3.zero;
-            }
-
-            jumpTimer -= Time.deltaTime;
         }
-        else ReactivateControl();
     }
+    //-----------------------------------
+
+    bool isMovingLeft = false;
+    bool isMovingRight = false;
+
+    //***TOUCH CONTROLS***
+    public void MoveLeft()
+    {
+        if (allowInput)
+        {
+            isMovingLeft = true;
+        }
+    }
+
+    public void EndLeft()
+    {
+        isMovingLeft = false;
+    }
+
+    public void MoveRight()
+    {
+        if (allowInput)
+        {
+            movement += transform.forward * runSpeed * Time.deltaTime;
+            isMovingRight = true;
+        }
+    }
+
+    public void EndRight()
+    {
+        isMovingRight = false;
+    }
+
+    public void ActivateJump()
+    {
+        if (CanJump())
+        {
+            jumpTimer = jumpForceDuration;
+            gravityForce = Vector3.zero;
+
+            if (jumpSFX && !GameOptions.Instance.MuteSFX)
+                playerSFX.PlayOneShot(jumpSFX);
+
+            playerAnimator.SetTrigger("jump");
+        }
+    }
+    //-----------------------------------
 
     void UpdateFacingDirection()
     {
-        if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxis("Horizontal") > 0 || isMovingRight)
         {
             frontNose.SetActive(true);
             backNose.SetActive(false);
             playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
             playerAnimator.SetBool("isRunning", true);
         }
-        else if (Input.GetAxis("Horizontal") < 0)
+        else if (Input.GetAxis("Horizontal") < 0 || isMovingLeft)
         {
             frontNose.SetActive(false);
             backNose.SetActive(true);
             playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
             playerAnimator.SetBool("isRunning", true);
         }
-        else if (touch1.IsTouching)
-        {
-            if (touch1.direction > 0)
-            {
-                frontNose.SetActive(true);
-                backNose.SetActive(false);
-                playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
-                playerAnimator.SetBool("isRunning", true);
-            }
-            else if (touch1.direction < 0)
-            {
-                frontNose.SetActive(false);
-                backNose.SetActive(true);
-                playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
-                playerAnimator.SetBool("isRunning", true);
-            }
-            else
-                playerAnimator.SetBool("isRunning", false);
-        }
-        else if (touch2.IsTouching)
-        {
-            if (touch2.direction > 0)
-            {
-                frontNose.SetActive(true);
-                backNose.SetActive(false);
-                playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
-                playerAnimator.SetBool("isRunning", true);
-            }
-            else if (touch2.direction < 0)
-            {
-                frontNose.SetActive(false);
-                backNose.SetActive(true);
-                playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
-                playerAnimator.SetBool("isRunning", true);
-            }
-            else
-                playerAnimator.SetBool("isRunning", false);
-        }
         else
             playerAnimator.SetBool("isRunning", false);
     }
 
-    // checks for no more input before allowing input again
-    // keeps player from moving immediately after respawn
-    void ReactivateControl()
+    void PlayerForces()
     {
-        if (Input.GetAxis("Horizontal") == 0 || Input.touchCount == 0)
-            allowInput = true;
-    }
+        if (isMovingLeft)
+            movement += -transform.forward * runSpeed * Time.deltaTime;
 
-    void ActivateJump()
-    {
-        jumpTimer = jumpForceDuration;
-        gravityForce = Vector3.zero;
+        if (isMovingRight)
+            movement += transform.forward * runSpeed * Time.deltaTime;
 
-        if (jumpSFX && !GameOptions.Instance.MuteSFX)
-            playerSFX.PlayOneShot(jumpSFX);
+        if (jumpTimer > 0)
+        {
+            movement += transform.up * jumpPower * Mathf.Min(jumpTimer, Time.deltaTime);
+            gravityForce = Vector3.zero;
+        }
 
-        playerAnimator.SetTrigger("jump");
+        jumpTimer -= Time.deltaTime;
     }
 
     void AutoForces()
