@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 748, y: 467}
+  customRes: {x: 547, y: 309}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -3079,6 +3079,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -5135032144255615250, guid: 241214457608b084094664587071045e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a87818f9f83096747bf52af75edb5df0, type: 2}
     - target: {fileID: -4216859302048453862, guid: 241214457608b084094664587071045e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3137,33 +3142,28 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 241214457608b084094664587071045e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.048478622
+      value: 5.04848
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 241214457608b084094664587071045e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.048478622
+      value: 5.04848
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 241214457608b084094664587071045e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.048478622
-      objectReference: {fileID: 0}
-    - target: {fileID: -5135032144255615250, guid: 241214457608b084094664587071045e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a87818f9f83096747bf52af75edb5df0, type: 2}
-    - target: {fileID: 5784271294751271150, guid: 241214457608b084094664587071045e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 5.04848
       objectReference: {fileID: 0}
     - target: {fileID: 3101927904012988207, guid: 241214457608b084094664587071045e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9ff8657ed23639b4a85ee42ad10c11da, type: 2}
+    - target: {fileID: 5784271294751271150, guid: 241214457608b084094664587071045e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 241214457608b084094664587071045e, type: 3}
 --- !u!1001 &874341732
