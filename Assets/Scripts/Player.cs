@@ -147,14 +147,14 @@ public class Player : MonoBehaviour
         {
             frontNose.SetActive(true);
             backNose.SetActive(false);
-            playerModel.transform.localEulerAngles = new Vector3(0, 0, 0);
+            playerModel.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
             playerAnimator.SetBool("isRunning", true);
         }
         else if (IsMovingLeft || Input.GetAxis("Horizontal") < 0)
         {
             frontNose.SetActive(false);
             backNose.SetActive(true);
-            playerModel.transform.localEulerAngles = new Vector3(0, 180, 0);
+            playerModel.transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
             playerAnimator.SetBool("isRunning", true);
         }
         else

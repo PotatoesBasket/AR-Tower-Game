@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 916278223601797821}
   m_Layer: 0
   m_Name: Front Nose
-  m_TagString: Corner
+  m_TagString: CornerTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 916278224763169643}
   m_Layer: 0
   m_Name: Back Nose
-  m_TagString: Corner
+  m_TagString: CornerTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

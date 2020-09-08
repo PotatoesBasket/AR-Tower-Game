@@ -15,7 +15,7 @@ public class Corner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Corner"))
+        if (other.CompareTag("CornerTrigger"))
         {
             player.transform.localEulerAngles = new Vector3(0, intendedAngle, 0);
         }
