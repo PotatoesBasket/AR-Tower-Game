@@ -33,6 +33,9 @@ public class Player : MonoBehaviour
     [Header("Gameplay test camera")]
     public GameObject altCamera;
 
+    [Header("Misc")]
+    public float slideFallSpeed = 0.01f;
+
     CharacterController player;
     AudioSource playerSFX;
 
@@ -277,7 +280,7 @@ public class Player : MonoBehaviour
     Vector3 prevPlatformPos;
     Vector3 moveOffset;
     bool onSlide = false;
-    public float slideSpeed = 0.01f;
+    WaypointController currentPushPlatform = null;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -300,6 +303,13 @@ public class Player : MonoBehaviour
         {
             onSlide = true;
         }
+
+        if (other.CompareTag("Push"))
+        {
+            currentPushPlatform = other.GetComponentInParent<WaypointController>();
+            prevPlatformPos = other.transform.position;
+            currPlatformPos = other.transform.position;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -314,7 +324,18 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Slide"))
         {
-            moveOffset += -other.transform.up * slideSpeed;
+            moveOffset += -other.transform.up * slideFallSpeed;
+        }
+
+        if (other.CompareTag("Push"))
+        {
+            if (currentPushPlatform.CustomBool == true)
+            {
+                prevPlatformPos = currPlatformPos;
+                currPlatformPos = other.transform.position;
+
+                moveOffset += currPlatformPos - prevPlatformPos;
+            }
         }
     }
 
@@ -329,12 +350,12 @@ public class Player : MonoBehaviour
         {
             onSlide = false;
         }
-    }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        collision.gameObject.CompareTag("Slide");
-        Debug.Log("slide collision");
+        if (other.CompareTag("Push"))
+        {
+            currentPushPlatform = null;
+            moveOffset = Vector3.zero;
+        }
     }
 
     private void OnDrawGizmos()

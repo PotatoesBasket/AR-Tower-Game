@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - CornerTrigger
   - Slide
+  - Push
   layers:
   - Default
   - TransparentFX

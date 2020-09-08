@@ -14,6 +14,8 @@ public class WaypointController : MonoBehaviour
     float timer;
     bool reverse = false;
 
+    public bool CustomBool { get; private set; } = false;
+
     Rigidbody rb;
 
     private void Start()
@@ -34,6 +36,7 @@ public class WaypointController : MonoBehaviour
         if (timer >= waypoints[currentWaypoint].timeToNext) //current to next point lerp finished
         {
             timer = 0; //reset timer
+            CustomBool = waypoints[currentWaypoint].customBoolSet;
 
             if (reverseAtEnd) //points set to reverse at end of list
             {
