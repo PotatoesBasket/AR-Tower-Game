@@ -208,7 +208,10 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        player.Move(movement + moveOffset + gravityForce);
+        if (!onSlide)
+            player.Move(movement + moveOffset + gravityForce);
+        else
+            player.Move(moveOffset);
     }
 
     public void Respawn()
@@ -273,6 +276,8 @@ public class Player : MonoBehaviour
     Vector3 currPlatformPos;
     Vector3 prevPlatformPos;
     Vector3 moveOffset;
+    bool onSlide = false;
+    public float slideSpeed = 0.01f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -290,6 +295,11 @@ public class Player : MonoBehaviour
             prevPlatformPos = other.transform.position;
             currPlatformPos = other.transform.position;
         }
+
+        if (other.CompareTag("Slide"))
+        {
+            onSlide = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -301,6 +311,11 @@ public class Player : MonoBehaviour
 
             moveOffset += currPlatformPos - prevPlatformPos;
         }
+
+        if (other.CompareTag("Slide"))
+        {
+            moveOffset += -other.transform.up * slideSpeed;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -309,6 +324,17 @@ public class Player : MonoBehaviour
         {
             moveOffset = Vector3.zero;
         }
+
+        if (other.CompareTag("Slide"))
+        {
+            onSlide = false;
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        collision.gameObject.CompareTag("Slide");
+        Debug.Log("slide collision");
     }
 
     private void OnDrawGizmos()

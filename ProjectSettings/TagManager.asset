@@ -9,6 +9,7 @@ TagManager:
   - Death
   - Platform
   - CornerTrigger
+  - Slide
   layers:
   - Default
   - TransparentFX

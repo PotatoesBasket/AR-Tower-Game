@@ -103,8 +103,6 @@ GameObject:
   - component: {fileID: 916278223765924434}
   - component: {fileID: 916278223765924433}
   - component: {fileID: 916278223765924438}
-  - component: {fileID: 916278223765924432}
-  - component: {fileID: 916278223765924435}
   - component: {fileID: 916278223765924458}
   m_Layer: 0
   m_Name: Player 1
@@ -122,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 916278223765924445}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0.2254, y: 0.13, z: 0.22}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.020000014, y: 0.02, z: 0.020000014}
   m_Children:
   - {fileID: 916278224584409761}
   - {fileID: 916278223601797820}
@@ -148,11 +146,11 @@ MonoBehaviour:
   accSpeed: 0.0001
   deccelSpeed: 0.05
   currentSpeed: 0
-  maxRunSpeed: 0.3
-  jumpPower: 0.6
+  maxRunSpeed: 0.26
+  jumpPower: 0.5
   jumpForceDuration: 0.2
   gravityPower: 0.01
-  rayOriginHeight: 0.02
+  rayOriginHeight: 0.01
   groundRayDist: 0.012
   safetyRayDist: 0.012
   allowJumpDist: 0.016
@@ -176,51 +174,9 @@ CharacterController:
   m_Radius: 0.49999997
   m_SlopeLimit: 45
   m_StepOffset: 0.002
-  m_SkinWidth: 0.0001
-  m_MinMoveDistance: 0.001
+  m_SkinWidth: 0.001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: -0.25, z: 0}
---- !u!114 &916278223765924432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916278223765924445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 360cf0b1d1b9ed84684cce3e9bbfeb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  touchPhase: 0
-  startTouchPos: {x: 0, y: 0, z: 0}
-  currentTouchPos: {x: 0, y: 0, z: 0}
-  direction: 0
-  originRadius: 0.5
-  touchTimer: 0
-  tapTimeLimit: 1
-  activateTap: 0
-  endFrame: 0
---- !u!114 &916278223765924435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916278223765924445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 360cf0b1d1b9ed84684cce3e9bbfeb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  touchPhase: 0
-  startTouchPos: {x: 0, y: 0, z: 0}
-  currentTouchPos: {x: 0, y: 0, z: 0}
-  direction: 0
-  originRadius: 0.5
-  touchTimer: 0
-  tapTimeLimit: 1
-  activateTap: 0
-  endFrame: 0
 --- !u!82 &916278223765924458
 AudioSource:
   m_ObjectHideFlags: 0
@@ -541,9 +497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14.1 - up to date.
+  cfuStatus: PSXEffects v1.14.1
   sections: 01010100
-  customRes: {x: 665, y: 136}
+  customRes: {x: 533, y: 327}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
