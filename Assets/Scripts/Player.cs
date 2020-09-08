@@ -33,6 +33,9 @@ public class Player : MonoBehaviour
     [Header("Gameplay test camera")]
     public GameObject altCamera;
 
+    [Header("Misc")]
+    public float slideFallSpeed = 0.01f;
+
     CharacterController player;
     AudioSource playerSFX;
 
@@ -208,7 +211,10 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        player.Move(movement + moveOffset + gravityForce);
+        if (!onSlide)
+            player.Move(movement + moveOffset + gravityForce);
+        else
+            player.Move(moveOffset);
     }
 
     public void Respawn()
@@ -273,6 +279,8 @@ public class Player : MonoBehaviour
     Vector3 currPlatformPos;
     Vector3 prevPlatformPos;
     Vector3 moveOffset;
+    bool onSlide = false;
+    WaypointController currentPushPlatform = null;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -290,6 +298,24 @@ public class Player : MonoBehaviour
             prevPlatformPos = other.transform.position;
             currPlatformPos = other.transform.position;
         }
+
+        if (other.CompareTag("Slide"))
+        {
+            onSlide = true;
+        }
+
+        if (other.CompareTag("Push"))
+        {
+            currentPushPlatform = other.GetComponentInParent<WaypointController>();
+            prevPlatformPos = other.transform.position;
+            currPlatformPos = other.transform.position;
+        }
+
+        if (other.CompareTag("End"))
+        {
+            SceneSwitcher s = GameObject.FindGameObjectWithTag("Manager").GetComponent<SceneSwitcher>();
+            s.LoadMenu();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -301,12 +327,39 @@ public class Player : MonoBehaviour
 
             moveOffset += currPlatformPos - prevPlatformPos;
         }
+
+        if (other.CompareTag("Slide"))
+        {
+            moveOffset += -other.transform.up * slideFallSpeed;
+        }
+
+        if (other.CompareTag("Push"))
+        {
+            if (currentPushPlatform.CustomBool == true)
+            {
+                prevPlatformPos = currPlatformPos;
+                currPlatformPos = other.transform.position;
+
+                moveOffset += currPlatformPos - prevPlatformPos;
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Platform"))
         {
+            moveOffset = Vector3.zero;
+        }
+
+        if (other.CompareTag("Slide"))
+        {
+            onSlide = false;
+        }
+
+        if (other.CompareTag("Push"))
+        {
+            currentPushPlatform = null;
             moveOffset = Vector3.zero;
         }
     }
