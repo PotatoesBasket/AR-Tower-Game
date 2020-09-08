@@ -11,6 +11,8 @@ TagManager:
   - CornerTrigger
   - Slide
   - Push
+  - End
+  - Manager
   layers:
   - Default
   - TransparentFX

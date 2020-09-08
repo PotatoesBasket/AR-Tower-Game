@@ -310,6 +310,12 @@ public class Player : MonoBehaviour
             prevPlatformPos = other.transform.position;
             currPlatformPos = other.transform.position;
         }
+
+        if (other.CompareTag("End"))
+        {
+            SceneSwitcher s = GameObject.FindGameObjectWithTag("Manager").GetComponent<SceneSwitcher>();
+            s.LoadMenu();
+        }
     }
 
     private void OnTriggerStay(Collider other)
