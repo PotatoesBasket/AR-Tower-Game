@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 916278223765924433}
   - component: {fileID: 916278223765924438}
   - component: {fileID: 916278223765924458}
-  - component: {fileID: 8363866244449834368}
+  - component: {fileID: 1683514688}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -275,7 +275,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &8363866244449834368
+--- !u!54 &1683514688
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -515,9 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14.1
+  cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 533, y: 327}
+  customRes: {x: 540, y: 1080}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
