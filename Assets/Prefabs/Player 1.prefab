@@ -159,6 +159,7 @@ MonoBehaviour:
   frontNose: {fileID: 916278223601797823}
   backNose: {fileID: 916278224763169621}
   altCamera: {fileID: 916278224584409760}
+  slideFallSpeed: 0.01
 --- !u!143 &916278223765924438
 CharacterController:
   m_ObjectHideFlags: 0
@@ -497,9 +498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14.1
+  cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 533, y: 327}
+  customRes: {x: 742, y: 237}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -970,7 +971,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 8262965207894082762, guid: cb6ad8ae17437484aafc3617d38534eb, type: 3}
+  m_Mesh: {fileID: 8262965207894082762, guid: 0265f208fe91a63498cf347bb9e64ff0, type: 3}
   m_Bones:
   - {fileID: 2159155896378317355}
   - {fileID: 7213871806752467689}
