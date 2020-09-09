@@ -12,6 +12,6 @@ public class SceneSwitcher : MonoBehaviour
 
     public void LoadLV1()
     {
-        SceneManager.LoadScene("PuzzleTower1 (V2)");
+        SceneManager.LoadScene("PuzzleTower1T3");
     }
 }

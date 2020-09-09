@@ -15,8 +15,8 @@ public class AppearDisappear : MonoBehaviour
 
     private void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        boxCollider = GetComponent<BoxCollider>();
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
+        boxCollider = GetComponentInChildren<BoxCollider>();
     }
 
     private void Update()
