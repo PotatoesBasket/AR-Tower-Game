@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1706521188024400324
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1098434012518923590, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cc81d21b02a11b47925c8afbb83f31d, type: 2}
+    - target: {fileID: 1098434012533029482, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_Name
+      value: Falling-Cracked-Stones-01-Variant-C
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029525, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cc81d21b02a11b47925c8afbb83f31d, type: 2}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098434012533029527, guid: b2ab2c3be6e730449a5d07716c3eeb77,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2ab2c3be6e730449a5d07716c3eeb77, type: 3}
