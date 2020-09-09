@@ -9,7 +9,12 @@ public class DebugText : MonoBehaviour
     public Text fixedUpdateFPS;
     public Text isGrounded;
 
-    public Player player;
+    Player player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
 
     private void Update()
     {
