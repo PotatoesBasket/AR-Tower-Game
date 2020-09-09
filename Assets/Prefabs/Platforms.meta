@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Platforms.meta
 guid: c59e5e51cddef984f8afc76823b7b11d
+=======
+guid: 651654b6e1a4a4441910e1cc4591265b
+>>>>>>> 86042787b11ae26460b1de0922ae76f6cbce5aca:Assets/Scenes/PuzzleTower1T3.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
