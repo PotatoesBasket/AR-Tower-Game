@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PuzzleTower1T3.unity
     guid: ec662e5fee5444944b233c81284d0b3b
+  - enabled: 1
+    path: Assets/Scenes/PuzzleTower2T3.unity
+    guid: 30ccada44b385664a9df538c745abf5f
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 5ca7985a1a1e5354093a688295168527,
       type: 2}
