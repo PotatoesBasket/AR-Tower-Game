@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public float slideFallSpeed = 0.01f;
     public GameObject touchControlPanel;
     public GameObject endPanel;
+    public GameObject endParticles;
 
     CharacterController player;
     AudioSource playerSFX;
@@ -317,6 +318,7 @@ public class Player : MonoBehaviour
         {
             touchControlPanel.SetActive(false);
             endPanel.SetActive(true);
+            endParticles.SetActive(true);
         }
     }
 
