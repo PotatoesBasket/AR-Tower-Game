@@ -6220,6 +6220,16 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 954459942716520799, guid: 64eebe6e209db224a9972692b58aeb88,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912471641793632770, guid: 64eebe6e209db224a9972692b58aeb88,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6665490409710475453, guid: 64eebe6e209db224a9972692b58aeb88,
         type: 3}
       propertyPath: m_Size.x
@@ -6239,16 +6249,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.13950041
-      objectReference: {fileID: 0}
-    - target: {fileID: 954459942716520799, guid: 64eebe6e209db224a9972692b58aeb88,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 7912471641793632770, guid: 64eebe6e209db224a9972692b58aeb88,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64eebe6e209db224a9972692b58aeb88, type: 3}
@@ -8573,7 +8573,7 @@ PrefabInstance:
     - target: {fileID: 5188887837273886302, guid: 6a1d3d83b16004141bd5d35704e7b7a5,
         type: 3}
       propertyPath: m_Name
-      value: Game Options
+      value: Game Manager
       objectReference: {fileID: 0}
     - target: {fileID: 5188887837273886302, guid: 6a1d3d83b16004141bd5d35704e7b7a5,
         type: 3}
