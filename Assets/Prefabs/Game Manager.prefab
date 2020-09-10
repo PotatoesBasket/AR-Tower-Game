@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5188887837273886272}
   - component: {fileID: 1848118167}
   m_Layer: 0
-  m_Name: Game Options
+  m_Name: Game Manager
   m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

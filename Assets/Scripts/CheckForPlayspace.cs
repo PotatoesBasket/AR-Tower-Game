@@ -13,6 +13,8 @@ public class CheckForPlayspace : MonoBehaviour
 
     public GameObject ARObjects; // for disabling during testing
 
+    public GameObject infoPanel; // instructions for how to start the game
+
     ARRaycastManager rayManager;
     Pose placementPose;
 
@@ -63,6 +65,7 @@ public class CheckForPlayspace : MonoBehaviour
     {
         tower.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
         tower.SetActive(true);
+        infoPanel.SetActive(false);
         towerPlaced = true;
     }
 
