@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
     [Header("Misc")]
     public float slideFallSpeed = 0.01f;
+    public GameObject touchControlPanel;
+    public GameObject endPanel;
 
     CharacterController player;
     AudioSource playerSFX;
@@ -313,8 +315,8 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("End"))
         {
-            SceneSwitcher s = GameObject.FindGameObjectWithTag("Manager").GetComponent<SceneSwitcher>();
-            s.LoadMenu();
+            touchControlPanel.SetActive(false);
+            endPanel.SetActive(true);
         }
     }
 
